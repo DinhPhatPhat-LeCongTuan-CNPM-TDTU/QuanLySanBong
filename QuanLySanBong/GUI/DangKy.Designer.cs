@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
             panel_DangNhap = new Panel();
+            pictureBox_Show_Hind_Password2 = new PictureBox();
+            label_XacNhanMatKhau = new Label();
+            textBox_XacNhanMatKhau = new TextBox();
+            label_Email = new Label();
+            textBox2 = new TextBox();
+            label_SoDienThoai = new Label();
+            textBox1 = new TextBox();
             label_DaCoTaiKhoan = new Label();
             button_DangNhap = new Button();
-            pictureBox1 = new PictureBox();
+            pictureBox_Show_Hind_Password = new PictureBox();
+            button_DangKy = new Button();
             label1 = new Label();
             label_TenKhachHang = new Label();
             textBox_MatKhau = new TextBox();
             textBox_TenKhachHang = new TextBox();
             label_DangKy = new Label();
-            label_SoDienThoai = new Label();
-            textBox1 = new TextBox();
-            label_Email = new Label();
-            textBox2 = new TextBox();
-            label_XacNhanMatKhau = new Label();
-            textBox_XacNhanMatKhau = new TextBox();
-            pictureBox2 = new PictureBox();
-            button_DangKy = new Button();
             pictureBox_DangKy = new PictureBox();
             panel_DangNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Show_Hind_Password2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Show_Hind_Password).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_DangKy).BeginInit();
             SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             // 
             panel_DangNhap.BackColor = Color.Transparent;
             panel_DangNhap.BorderStyle = BorderStyle.FixedSingle;
-            panel_DangNhap.Controls.Add(pictureBox2);
+            panel_DangNhap.Controls.Add(pictureBox_Show_Hind_Password2);
             panel_DangNhap.Controls.Add(label_XacNhanMatKhau);
             panel_DangNhap.Controls.Add(textBox_XacNhanMatKhau);
             panel_DangNhap.Controls.Add(label_Email);
@@ -66,7 +66,7 @@
             panel_DangNhap.Controls.Add(textBox1);
             panel_DangNhap.Controls.Add(label_DaCoTaiKhoan);
             panel_DangNhap.Controls.Add(button_DangNhap);
-            panel_DangNhap.Controls.Add(pictureBox1);
+            panel_DangNhap.Controls.Add(pictureBox_Show_Hind_Password);
             panel_DangNhap.Controls.Add(button_DangKy);
             panel_DangNhap.Controls.Add(label1);
             panel_DangNhap.Controls.Add(label_TenKhachHang);
@@ -76,7 +76,68 @@
             panel_DangNhap.Name = "panel_DangNhap";
             panel_DangNhap.Size = new Size(582, 409);
             panel_DangNhap.TabIndex = 4;
-            panel_DangNhap.Paint += panel_DangNhap_Paint;
+            // 
+            // pictureBox_Show_Hind_Password2
+            // 
+            pictureBox_Show_Hind_Password2.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox_Show_Hind_Password2.Image = (Image)resources.GetObject("pictureBox_Show_Hind_Password2.Image");
+            pictureBox_Show_Hind_Password2.Location = new Point(513, 219);
+            pictureBox_Show_Hind_Password2.Name = "pictureBox_Show_Hind_Password2";
+            pictureBox_Show_Hind_Password2.Size = new Size(31, 27);
+            pictureBox_Show_Hind_Password2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox_Show_Hind_Password2.TabIndex = 23;
+            pictureBox_Show_Hind_Password2.TabStop = false;
+            // 
+            // label_XacNhanMatKhau
+            // 
+            label_XacNhanMatKhau.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_XacNhanMatKhau.Location = new Point(44, 207);
+            label_XacNhanMatKhau.Name = "label_XacNhanMatKhau";
+            label_XacNhanMatKhau.Size = new Size(76, 47);
+            label_XacNhanMatKhau.TabIndex = 22;
+            label_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
+            // 
+            // textBox_XacNhanMatKhau
+            // 
+            textBox_XacNhanMatKhau.Location = new Point(138, 219);
+            textBox_XacNhanMatKhau.Name = "textBox_XacNhanMatKhau";
+            textBox_XacNhanMatKhau.PasswordChar = '*';
+            textBox_XacNhanMatKhau.Size = new Size(378, 27);
+            textBox_XacNhanMatKhau.TabIndex = 4;
+            // 
+            // label_Email
+            // 
+            label_Email.AutoSize = true;
+            label_Email.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_Email.Location = new Point(73, 114);
+            label_Email.Name = "label_Email";
+            label_Email.Size = new Size(47, 21);
+            label_Email.TabIndex = 13;
+            label_Email.Text = "Email";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(138, 108);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(406, 27);
+            textBox2.TabIndex = 2;
+            // 
+            // label_SoDienThoai
+            // 
+            label_SoDienThoai.AutoSize = true;
+            label_SoDienThoai.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_SoDienThoai.Location = new Point(19, 70);
+            label_SoDienThoai.Name = "label_SoDienThoai";
+            label_SoDienThoai.Size = new Size(101, 21);
+            label_SoDienThoai.TabIndex = 11;
+            label_SoDienThoai.Text = "Số điện thoại";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(138, 64);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(406, 27);
+            textBox1.TabIndex = 1;
             // 
             // label_DaCoTaiKhoan
             // 
@@ -92,19 +153,30 @@
             button_DangNhap.Location = new Point(160, 333);
             button_DangNhap.Name = "button_DangNhap";
             button_DangNhap.Size = new Size(391, 32);
-            button_DangNhap.TabIndex = 8;
+            button_DangNhap.TabIndex = 6;
             button_DangNhap.Text = "Đăng nhập";
             button_DangNhap.UseVisualStyleBackColor = true;
+            button_DangNhap.Click += button_DangNhap_Click;
             // 
-            // pictureBox1
+            // pictureBox_Show_Hind_Password
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(513, 163);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(31, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
+            pictureBox_Show_Hind_Password.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox_Show_Hind_Password.Image = (Image)resources.GetObject("pictureBox_Show_Hind_Password.Image");
+            pictureBox_Show_Hind_Password.Location = new Point(513, 163);
+            pictureBox_Show_Hind_Password.Name = "pictureBox_Show_Hind_Password";
+            pictureBox_Show_Hind_Password.Size = new Size(31, 27);
+            pictureBox_Show_Hind_Password.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox_Show_Hind_Password.TabIndex = 7;
+            pictureBox_Show_Hind_Password.TabStop = false;
+            // 
+            // button_DangKy
+            // 
+            button_DangKy.Location = new Point(19, 271);
+            button_DangKy.Name = "button_DangKy";
+            button_DangKy.Size = new Size(532, 39);
+            button_DangKy.TabIndex = 5;
+            button_DangKy.Text = "Đăng ký";
+            button_DangKy.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -132,7 +204,7 @@
             textBox_MatKhau.Name = "textBox_MatKhau";
             textBox_MatKhau.PasswordChar = '*';
             textBox_MatKhau.Size = new Size(378, 27);
-            textBox_MatKhau.TabIndex = 1;
+            textBox_MatKhau.TabIndex = 3;
             // 
             // textBox_TenKhachHang
             // 
@@ -153,76 +225,6 @@
             label_DangKy.Text = "Đăng ký";
             label_DangKy.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label_SoDienThoai
-            // 
-            label_SoDienThoai.AutoSize = true;
-            label_SoDienThoai.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label_SoDienThoai.Location = new Point(19, 70);
-            label_SoDienThoai.Name = "label_SoDienThoai";
-            label_SoDienThoai.Size = new Size(101, 21);
-            label_SoDienThoai.TabIndex = 11;
-            label_SoDienThoai.Text = "Số điện thoại";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(138, 64);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(406, 27);
-            textBox1.TabIndex = 10;
-            // 
-            // label_Email
-            // 
-            label_Email.AutoSize = true;
-            label_Email.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label_Email.Location = new Point(73, 114);
-            label_Email.Name = "label_Email";
-            label_Email.Size = new Size(47, 21);
-            label_Email.TabIndex = 13;
-            label_Email.Text = "Email";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(138, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(406, 27);
-            textBox2.TabIndex = 12;
-            // 
-            // label_XacNhanMatKhau
-            // 
-            label_XacNhanMatKhau.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label_XacNhanMatKhau.Location = new Point(44, 207);
-            label_XacNhanMatKhau.Name = "label_XacNhanMatKhau";
-            label_XacNhanMatKhau.Size = new Size(76, 47);
-            label_XacNhanMatKhau.TabIndex = 22;
-            label_XacNhanMatKhau.Text = "Xác nhận mật khẩu";
-            // 
-            // textBox_XacNhanMatKhau
-            // 
-            textBox_XacNhanMatKhau.Location = new Point(138, 219);
-            textBox_XacNhanMatKhau.Name = "textBox_XacNhanMatKhau";
-            textBox_XacNhanMatKhau.PasswordChar = '*';
-            textBox_XacNhanMatKhau.Size = new Size(378, 27);
-            textBox_XacNhanMatKhau.TabIndex = 21;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(513, 219);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(31, 27);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 23;
-            pictureBox2.TabStop = false;
-            // 
-            // button_DangKy
-            // 
-            button_DangKy.Location = new Point(19, 271);
-            button_DangKy.Name = "button_DangKy";
-            button_DangKy.Size = new Size(532, 39);
-            button_DangKy.TabIndex = 5;
-            button_DangKy.Text = "Đăng ký";
-            button_DangKy.UseVisualStyleBackColor = true;
-            // 
             // pictureBox_DangKy
             // 
             pictureBox_DangKy.Image = (Image)resources.GetObject("pictureBox_DangKy.Image");
@@ -241,15 +243,15 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(850, 625);
             ControlBox = false;
-            Controls.Add(pictureBox_DangKy);
             Controls.Add(panel_DangNhap);
+            Controls.Add(pictureBox_DangKy);
             Controls.Add(label_DangKy);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DangKy";
             panel_DangNhap.ResumeLayout(false);
             panel_DangNhap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Show_Hind_Password2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Show_Hind_Password).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_DangKy).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -260,7 +262,7 @@
         private Panel panel_DangNhap;
         private Label label_DaCoTaiKhoan;
         private Button button_DangNhap;
-        private PictureBox pictureBox1;
+        private PictureBox pictureBox_Show_Hind_Password;
         private Label label1;
         private Label label_TenKhachHang;
         private TextBox textBox_MatKhau;
@@ -272,7 +274,7 @@
         private TextBox textBox2;
         private Label label_XacNhanMatKhau;
         private TextBox textBox_XacNhanMatKhau;
-        private PictureBox pictureBox2;
+        private PictureBox pictureBox_Show_Hind_Password2;
         private Button button_DangKy;
         private PictureBox pictureBox_DangKy;
     }

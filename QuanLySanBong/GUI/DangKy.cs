@@ -12,14 +12,17 @@ namespace GUI
 {
     public partial class DangKy : Form
     {
-        public DangKy()
+        private Software softwareInstance;
+        public DangKy(Software softwareInstance)
         {
             InitializeComponent();
+            this.softwareInstance = softwareInstance;
         }
 
-        private void panel_DangNhap_Paint(object sender, PaintEventArgs e)
+        private void button_DangNhap_Click(object sender, EventArgs e)
         {
-
+            DangNhap dangNhap = new DangNhap(softwareInstance);
+            softwareInstance.changePanelShow(dangNhap);
         }
     }
 }

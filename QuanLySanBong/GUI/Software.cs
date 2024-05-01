@@ -28,12 +28,18 @@ namespace GUI
         {
             if (isLoged == false)
             {
-                DangNhap dangnhap = new DangNhap();
-                dangnhap.TopLevel = false; //TopLevel = false giúp form không được xem là form độc lập
-                dangnhap.Dock = DockStyle.Fill; 
-                panel_Container.Controls.Add(dangnhap);
-                dangnhap.Show();
+                DangNhap dangnhap = new DangNhap(this);
+                changePanelShow(dangnhap);
             }
+        }
+
+        public void changePanelShow(Form formToShow)
+        {
+            formToShow.TopLevel = false; 
+            formToShow.Dock = DockStyle.Fill;
+            panel_Container.Controls.Clear();
+            panel_Container.Controls.Add(formToShow);
+            formToShow.Show();
         }
     }
 }

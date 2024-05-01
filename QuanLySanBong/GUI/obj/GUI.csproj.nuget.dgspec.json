@@ -4,6 +4,188 @@
     "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\GUI\\GUI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\BLL\\BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\BLL\\BLL.csproj",
+        "projectName": "BLL",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DAL\\DAL.csproj"
+              },
+              "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj",
+        "projectName": "DTO",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\GUI\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +209,14 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\BLL\\BLL.csproj"
+              },
+              "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Hoc tap\\NAM 2\\HK2\\Software Engineering\\QuanLySanBong\\QuanLySanBong\\DTO\\DTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

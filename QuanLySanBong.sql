@@ -51,3 +51,23 @@ insert into KhachHang values (
 	'Dong Thap',
 	0
 )
+
+use QuanLySanBong
+create table QuanLy(
+	maQuanLy varchar(5),
+	tenQuanLy varchar(50),
+	soDienThoai varchar(10),
+	email varchar(50),
+	matKhau varchar(50),
+	toanQuyen bit
+	primary key(maQuanLy)
+)
+
+insert into QuanLy values (
+	'AD001',
+	'Le Cong Tuan',
+	'0123456789',
+	'lecongtuan@gmail.com',
+	'lecongtuanadmin',
+	1
+)
