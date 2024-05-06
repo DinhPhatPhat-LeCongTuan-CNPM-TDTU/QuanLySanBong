@@ -22,6 +22,20 @@ create table KhachHang(
 	primary key(maKhachHang)
 )
 
+create table OTP(
+	email varchar(50),
+	otpCode int,
+	otpStart smalldatetime,
+	otpEnd smalldatetime,
+
+	primary key(email)
+
+)
+
+$@"Insert into OTP values 
+(
+{otp.email},{otp.otpCode},{otp.otpStart.ToString("dd/MM/yyyy")},{otp.otpEnd.ToString("dd/MM/yyyy")}
+)";
 
 /*Ma khach hang phat sinh tu dong, KHXXYYYYYY,
 KH la viet tat cua KH
@@ -53,6 +67,7 @@ insert into KhachHang values (
 )
 
 use QuanLySanBong
+
 create table QuanLy(
 	maQuanLy varchar(5),
 	tenQuanLy varchar(50),
@@ -71,3 +86,5 @@ insert into QuanLy values (
 	'lecongtuanadmin',
 	1
 )
+
+select * from OTP

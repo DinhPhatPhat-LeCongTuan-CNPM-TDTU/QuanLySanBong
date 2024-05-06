@@ -3,7 +3,8 @@ namespace GUI
 {
     public partial class Software : Form
     {
-        private bool isLoged = false;
+        public bool isLoged = false;
+        private Dictionary<Form, Dictionary<string, object>> formStates = new Dictionary<Form, Dictionary<string, object>>();
         public Software()
         {
             InitializeComponent();
@@ -35,11 +36,20 @@ namespace GUI
 
         public void changePanelShow(Form formToShow)
         {
-            formToShow.TopLevel = false; 
+            formToShow.TopLevel = false;
             formToShow.Dock = DockStyle.Fill;
             panel_Container.Controls.Clear();
             panel_Container.Controls.Add(formToShow);
             formToShow.Show();
+        }
+
+        private void Software_SizeChanged(object sender, EventArgs e)
+        {
+            //Khi form chính thay đổi kích thước, panel chứa form con cũng thay đổi kích thước
+            int newPanelWidth = (int)this.Width / (1080/850);
+            int newPanelHeight = (int)this.Height / (720/625);
+            panel_Container.Size = new Size(newPanelWidth, newPanelHeight);
+
         }
     }
 }

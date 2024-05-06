@@ -12,7 +12,7 @@ Mục tiêu tiếp theo:
 
 #################################################################
 12:45 AM 5/2
-- DTO: đã mô hình hóa KhachHang và QuanLy.
+-DTO: đã mô hình hóa KhachHang và QuanLy.
 -DAL: KhachHangAccess, QuanLyAccess có các phương thức làm việc với database để kiểm tra tài khoản tồn tại hay không.
 -BLL:  KhachHangBLL, QuanLyBLL có các phương thức gọi tới DAL để kiểm tra đăng nhập.
 -GUI: 

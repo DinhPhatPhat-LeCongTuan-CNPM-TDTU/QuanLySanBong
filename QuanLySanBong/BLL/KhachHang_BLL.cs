@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using DTO;
 
 namespace BLL
 {
@@ -16,6 +17,28 @@ namespace BLL
             return KhachHangAccess.CheckLoginValid(email_soDienThoai, matKhau);
                 
         }
-        
+
+        public static bool checkEmailExist(string email)
+        {
+            string dieuKien = $"email = '{email}'";
+            if (KhachHangAccess.SelectOneKhachHang(dieuKien).Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool checkSoDienThoaiExist(string soDienThoai)
+        {
+            string dieuKien = $"soDienThoai = '{soDienThoai}'";
+            if (KhachHangAccess.SelectOneKhachHang(dieuKien).Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        /*public static void AddKhachHang(KhachHang khachHang)
+        {
+            khachHang.
+        }*/
     }
 }

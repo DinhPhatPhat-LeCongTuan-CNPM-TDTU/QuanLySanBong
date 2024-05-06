@@ -261,8 +261,10 @@
             Controls.Add(panel_Container);
             Controls.Add(flowLayoutPanel_Left);
             Controls.Add(panel_Top);
+            MinimumSize = new Size(1080, 720);
             Name = "Software";
             Text = "My Football Field- Quản lý sân bóng";
+            SizeChanged += Software_SizeChanged;
             panel_Top.ResumeLayout(false);
             panel_Top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Menu).EndInit();

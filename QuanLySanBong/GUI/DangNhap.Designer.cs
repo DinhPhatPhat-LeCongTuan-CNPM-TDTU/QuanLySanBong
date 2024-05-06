@@ -37,17 +37,17 @@
             checkBox_DangNhapVoiTuCachQuanLy = new CheckBox();
             button_DangNhap = new Button();
             checkBox_GhiNhoDangNhap = new CheckBox();
-            label1 = new Label();
+            label_MatKhau = new Label();
             label_SoDienThoaiHoacEmail = new Label();
             textBox_MatKhau = new TextBox();
             textBox_SoDienThoai_Email = new TextBox();
             pictureBox_DangNhap = new PictureBox();
-            panel_LoiDangNhap = new Panel();
-            label_LoiDangNhap = new Label();
+            panel_ThongBao = new Panel();
+            label_ThongBao = new Label();
             panel_DangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Show_Hind_Password).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_DangNhap).BeginInit();
-            panel_LoiDangNhap.SuspendLayout();
+            panel_ThongBao.SuspendLayout();
             SuspendLayout();
             // 
             // label_DangNhap
@@ -72,7 +72,7 @@
             panel_DangNhap.Controls.Add(checkBox_DangNhapVoiTuCachQuanLy);
             panel_DangNhap.Controls.Add(button_DangNhap);
             panel_DangNhap.Controls.Add(checkBox_GhiNhoDangNhap);
-            panel_DangNhap.Controls.Add(label1);
+            panel_DangNhap.Controls.Add(label_MatKhau);
             panel_DangNhap.Controls.Add(label_SoDienThoaiHoacEmail);
             panel_DangNhap.Controls.Add(textBox_MatKhau);
             panel_DangNhap.Controls.Add(textBox_SoDienThoai_Email);
@@ -123,12 +123,13 @@
             // 
             // button_DangNhap
             // 
+            button_DangNhap.BackColor = Color.FromArgb(175, 209, 152);
             button_DangNhap.Location = new Point(15, 190);
             button_DangNhap.Name = "button_DangNhap";
             button_DangNhap.Size = new Size(532, 39);
             button_DangNhap.TabIndex = 4;
             button_DangNhap.Text = "Đăng nhập";
-            button_DangNhap.UseVisualStyleBackColor = true;
+            button_DangNhap.UseVisualStyleBackColor = false;
             button_DangNhap.Click += button_DangNhap_Click;
             // 
             // checkBox_GhiNhoDangNhap
@@ -141,15 +142,15 @@
             checkBox_GhiNhoDangNhap.Text = "Ghi nhớ đăng nhập";
             checkBox_GhiNhoDangNhap.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // label_MatKhau
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(87, 80);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 21);
-            label1.TabIndex = 3;
-            label1.Text = "Mật khẩu";
+            label_MatKhau.AutoSize = true;
+            label_MatKhau.Font = new Font("Calibri Light", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_MatKhau.Location = new Point(87, 80);
+            label_MatKhau.Name = "label_MatKhau";
+            label_MatKhau.Size = new Size(76, 21);
+            label_MatKhau.TabIndex = 3;
+            label_MatKhau.Text = "Mật khẩu";
             // 
             // label_SoDienThoaiHoacEmail
             // 
@@ -186,23 +187,23 @@
             pictureBox_DangNhap.TabIndex = 2;
             pictureBox_DangNhap.TabStop = false;
             // 
-            // panel_LoiDangNhap
+            // panel_ThongBao
             // 
-            panel_LoiDangNhap.Controls.Add(label_LoiDangNhap);
-            panel_LoiDangNhap.Location = new Point(141, 67);
-            panel_LoiDangNhap.Name = "panel_LoiDangNhap";
-            panel_LoiDangNhap.Size = new Size(566, 25);
-            panel_LoiDangNhap.TabIndex = 4;
+            panel_ThongBao.Controls.Add(label_ThongBao);
+            panel_ThongBao.Location = new Point(141, 67);
+            panel_ThongBao.Name = "panel_ThongBao";
+            panel_ThongBao.Size = new Size(566, 25);
+            panel_ThongBao.TabIndex = 4;
             // 
-            // label_LoiDangNhap
+            // label_ThongBao
             // 
-            label_LoiDangNhap.Dock = DockStyle.Fill;
-            label_LoiDangNhap.ForeColor = Color.FromArgb(60, 91, 111);
-            label_LoiDangNhap.Location = new Point(0, 0);
-            label_LoiDangNhap.Name = "label_LoiDangNhap";
-            label_LoiDangNhap.Size = new Size(566, 25);
-            label_LoiDangNhap.TabIndex = 0;
-            label_LoiDangNhap.TextAlign = ContentAlignment.MiddleCenter;
+            label_ThongBao.Dock = DockStyle.Fill;
+            label_ThongBao.ForeColor = Color.FromArgb(60, 91, 111);
+            label_ThongBao.Location = new Point(0, 0);
+            label_ThongBao.Name = "label_ThongBao";
+            label_ThongBao.Size = new Size(566, 25);
+            label_ThongBao.TabIndex = 0;
+            label_ThongBao.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // DangNhap
             // 
@@ -212,7 +213,7 @@
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(850, 625);
             ControlBox = false;
-            Controls.Add(panel_LoiDangNhap);
+            Controls.Add(panel_ThongBao);
             Controls.Add(panel_DangNhap);
             Controls.Add(pictureBox_DangNhap);
             Controls.Add(label_DangNhap);
@@ -223,7 +224,7 @@
             panel_DangNhap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Show_Hind_Password).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_DangNhap).EndInit();
-            panel_LoiDangNhap.ResumeLayout(false);
+            panel_ThongBao.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -233,7 +234,7 @@
         private Label label_DangNhap;
         private Panel panel_DangNhap;
         private TextBox textBox_SoDienThoai_Email;
-        private Label label1;
+        private Label label_MatKhau;
         private Label label_SoDienThoaiHoacEmail;
         private TextBox textBox_MatKhau;
         private PictureBox pictureBox_DangNhap;
@@ -243,7 +244,7 @@
         private PictureBox pictureBox_Show_Hind_Password;
         private Label label_ChuaCoTaiKhoan;
         private Button button_DangKy;
-        private Panel panel_LoiDangNhap;
-        private Label label_LoiDangNhap;
+        private Panel panel_ThongBao;
+        private Label label_ThongBao;
     }
 }

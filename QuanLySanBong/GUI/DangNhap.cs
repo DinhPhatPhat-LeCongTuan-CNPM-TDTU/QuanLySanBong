@@ -15,11 +15,12 @@ namespace GUI
     public partial class DangNhap : Form
     {
         private Software softwareInstance;
-        private bool isShowingPassword = false;
         public DangNhap(Software softwareInstance)
         {
             InitializeComponent();
             this.softwareInstance = softwareInstance;
+            textBox_SoDienThoai_Email.Text = Properties.Settings.Default.soDienThoai_Email;
+            textBox_MatKhau.Text = Properties.Settings.Default.matKhau;
         }
 
         private void button_DangNhap_Click(object sender, EventArgs e)
@@ -30,15 +31,15 @@ namespace GUI
             
             if (soDienThoai_Email.Trim() == "" || matKhau.Trim() == "")
             {
-                label_LoiDangNhap.Text = "Vui lòng điền đầy đủ thông tin đăng nhập";
-                ClearLoiDangNhap();
+                label_ThongBao.Text = "Vui lòng điền đầy đủ thông tin đăng nhập";
+                ClearThongBao();
                 return;
             }
 
             else if (soDienThoai_Email.Contains('\'') || matKhau.Contains('\''))
             {
-                label_LoiDangNhap.Text = "Thông tin đăng nhập chứa  ký tự không hợp lệ";
-                ClearLoiDangNhap();
+                label_ThongBao.Text = "Thông tin đăng nhập chứa  ký tự không hợp lệ";
+                ClearThongBao();
                 return;
             }
 
@@ -47,13 +48,25 @@ namespace GUI
             {
                 if (QuanLy_BLL.checkLoginValid(soDienThoai_Email, matKhau))
                 {
-                    label_LoiDangNhap.Text = "Đăng nhâp với tư cách quản lý thành công";
-                    ClearLoiDangNhap();
+                    if (checkBox_GhiNhoDangNhap.Checked)
+                    {
+                        Properties.Settings.Default.soDienThoai_Email = soDienThoai_Email;
+                        Properties.Settings.Default.matKhau = matKhau;
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.soDienThoai_Email = "";
+                        Properties.Settings.Default.matKhau = "";
+                        Properties.Settings.Default.Save();
+                    }
+                    label_ThongBao.Text = "Đăng nhâp với tư cách quản lý thành công";
+                    ClearThongBao();
                 }
                 else
                 {
-                    label_LoiDangNhap.Text = "Thông tin đăng nhập không hợp lệ";
-                    ClearLoiDangNhap();
+                    label_ThongBao.Text = "Thông tin đăng nhập không hợp lệ";
+                    ClearThongBao();
                 }
                 return;
             }
@@ -62,13 +75,25 @@ namespace GUI
             {
                 if (KhachHang_BLL.checkLoginValid(soDienThoai_Email, matKhau))
                 {
-                    label_LoiDangNhap.Text = "Đăng nhâp với tư cách khách hàng thành công";
-                    ClearLoiDangNhap();
+                    if (checkBox_GhiNhoDangNhap.Checked)
+                    {
+                        Properties.Settings.Default.soDienThoai_Email = soDienThoai_Email;
+                        Properties.Settings.Default.matKhau = matKhau;
+                        Properties.Settings.Default.Save();
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.soDienThoai_Email = "";
+                        Properties.Settings.Default.matKhau = "";
+                        Properties.Settings.Default.Save();
+                    }
+                    label_ThongBao.Text = "Đăng nhâp với tư cách khách hàng thành công";
+                    ClearThongBao();
                 }
                 else
                 {
-                    label_LoiDangNhap.Text = "Thông tin đăng nhập không hợp lệ";
-                    ClearLoiDangNhap();
+                    label_ThongBao.Text = "Thông tin đăng nhập không hợp lệ";
+                    ClearThongBao();
                 }
                 return;
             }
@@ -81,25 +106,17 @@ namespace GUI
             softwareInstance.changePanelShow(dangKy);
         }
 
-        private async void ClearLoiDangNhap()
+        private async void ClearThongBao()
         {
             await Task.Delay(5000);
-            label_LoiDangNhap.Text = "";
+            label_ThongBao.Text = "";
         }
 
         private void pictureBox_Show_Hind_Password_Click(object sender, EventArgs e)
         {
-            if (isShowingPassword == false)
-            {
-                textBox_MatKhau.UseSystemPasswordChar = false;
-                isShowingPassword = true;
-            }
-            else
-            {
-                textBox_MatKhau.UseSystemPasswordChar = true;
-                isShowingPassword = false;
-            }
-
+            textBox_MatKhau.UseSystemPasswordChar = textBox_MatKhau.PasswordChar == '\0' ? true : false;
         }
+
+
     }
 }

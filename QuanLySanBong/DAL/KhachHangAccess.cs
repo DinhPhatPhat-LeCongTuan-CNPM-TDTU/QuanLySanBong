@@ -10,9 +10,9 @@ namespace DAL
 {
     public class KhachHangAccess
     {
-        public static DataTable SelectOneKhachHang(KhachHang khachHang)
+        public static DataTable SelectOneKhachHang(string dieuKien)
         {
-            string query = @$"Select * from KhachHang where maKhachHang = {khachHang.maKhachHang} ";
+            string query = @$"Select * from KhachHang where ({dieuKien}) ";
             return Connection.selectQuery(query);
         }
 
@@ -35,6 +35,21 @@ namespace DAL
                 return true;
             }
             return false;
+        }
+
+        public static void AddKhachHang(KhachHang khachHang)
+        {
+            string query = $@"Insert into KhachHang values (
+            {khachHang.maKhachHang},
+            {khachHang.tenKhachHang},
+            {khachHang.soDienThoai},
+            {khachHang.email},
+            {khachHang.matKhau},
+            {khachHang.gioiTinh},
+            {khachHang.ngaySinh},
+            {khachHang.diaChi},
+            {khachHang.soLanDatSan})";
+            Connection.actionQuery(query);
         }
     }
 }
