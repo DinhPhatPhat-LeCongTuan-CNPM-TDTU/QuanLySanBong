@@ -21,3 +21,12 @@ Mục tiêu tiếp theo:
  +pictureBox_Show_Hind_Password có thể click vào để hiện, ẩn mật khẩu.
 
 Mục tiêu tiếp theo: Hoàn thành chức năng Đăng Ký, ghi nhớ Đăng Nhập, giao diện Tài Khoản sau khi đăng nhập thành công đối với từng Actors
+
+#################################################################
+12:45 AM 5/2
+-DTO: đã mô hình hóa OTP
+-DAL: OTPAccess
+-BLL: OTP_BLL
+-GUI: 
+
+Mục tiêu tiếp theo: trang chủ sau khi đăng nhập
