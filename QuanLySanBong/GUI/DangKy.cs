@@ -75,7 +75,7 @@ namespace GUI
             }
 
 
-            XacNhanOTP xacNhanOTP = new XacNhanOTP(softwareInstance,this, "Register");
+            OTPDangKy xacNhanOTP = new OTPDangKy(softwareInstance,this);
             softwareInstance.changePanelShow(xacNhanOTP);
             //Gửi OTP cho mail đăng ký bằng mail dinhtainang@gmail.com
 

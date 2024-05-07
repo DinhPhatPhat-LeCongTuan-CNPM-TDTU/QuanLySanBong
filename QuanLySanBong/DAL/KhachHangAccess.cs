@@ -16,6 +16,19 @@ namespace DAL
             return Connection.selectQuery(query);
         }
 
+        public static DataTable SelectTop1KhachHang()
+        {
+            string query = @$"Select top 1* from KhachHang
+                                ORDER BY CAST(RIGHT(maKhachHang, 8) AS bigint) DESC ";
+            return Connection.selectQuery(query);
+        }
+
+        public static DataTable SelectAllKhachHang()
+        {
+            string query = "Select * from KhachHang";
+            return Connection.selectQuery(query);
+        }
+
         public static bool CheckLoginValid(string email_soDienThoai, string matKhau)
         {
             string query = $@"Select * from KhachHang 
@@ -40,14 +53,14 @@ namespace DAL
         public static void AddKhachHang(KhachHang khachHang)
         {
             string query = $@"Insert into KhachHang values (
-            {khachHang.maKhachHang},
-            {khachHang.tenKhachHang},
-            {khachHang.soDienThoai},
-            {khachHang.email},
-            {khachHang.matKhau},
-            {khachHang.gioiTinh},
-            {khachHang.ngaySinh},
-            {khachHang.diaChi},
+            '{khachHang.maKhachHang}',
+            '{khachHang.tenKhachHang}',
+            '{khachHang.soDienThoai}',
+            '{khachHang.email}',
+            '{khachHang.matKhau}',
+            '{khachHang.gioiTinh}',
+            '{khachHang.ngaySinh}',
+            '{khachHang.diaChi}',
             {khachHang.soLanDatSan})";
             Connection.actionQuery(query);
         }

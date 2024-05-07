@@ -4,7 +4,8 @@ namespace GUI
     public partial class Software : Form
     {
         public bool isLoged = false;
-        private Dictionary<Form, Dictionary<string, object>> formStates = new Dictionary<Form, Dictionary<string, object>>();
+        public bool isAdmin = false;
+        private string childFormNow = "";
         public Software()
         {
             InitializeComponent();
@@ -27,10 +28,27 @@ namespace GUI
 
         private void button_TaiKhoan_Click(object sender, EventArgs e)
         {
+            if (childFormNow == "TaiKhoan")
+            {
+                return;
+            }
             if (isLoged == false)
             {
+                childFormNow = "TaiKhoan";
                 DangNhap dangnhap = new DangNhap(this);
                 changePanelShow(dangnhap);
+            }
+            else
+            {
+                if (isAdmin)
+                {
+                    changePanelShow(new TaiKhoanQuanLy(this));
+                }
+                else
+                {
+                    changePanelShow(new TaiKhoanKhachHang(this));
+                }
+                childFormNow = "TaiKhoan";
             }
         }
 
@@ -46,9 +64,39 @@ namespace GUI
         private void Software_SizeChanged(object sender, EventArgs e)
         {
             //Khi form chính thay đổi kích thước, panel chứa form con cũng thay đổi kích thước
-            int newPanelWidth = (int)this.Width / (1080/850);
-            int newPanelHeight = (int)this.Height / (720/625);
+            int newPanelWidth = (int)this.Width / (1080 / 850);
+            int newPanelHeight = (int)this.Height / (720 / 625);
             panel_Container.Size = new Size(newPanelWidth, newPanelHeight);
+
+        }
+
+        private void button_TrangChu_Click(object sender, EventArgs e)
+        {
+            if (childFormNow == "TrangChu")
+            {
+                return;
+            }
+            childFormNow = "TrangChu";
+            changePanelShow(new TrangChu(this));
+        }
+
+        private void button_DatSan_Click(object sender, EventArgs e)
+        {
+            if (childFormNow == "DatSan")
+            {
+                return;
+            }
+            if (isLoged == false)
+            {
+                childFormNow = "TaiKhoan";
+                DangNhap dangnhap = new DangNhap(this);
+                changePanelShow(dangnhap);
+            }
+            else
+            {
+                childFormNow = "DatSan";
+                changePanelShow(new DatSan(this));
+            }
 
         }
     }

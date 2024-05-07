@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class XacNhanOTP
+    partial class OTPDangKy
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             label_XacNhanOTP = new Label();
             panel_OTP = new Panel();
-            label_MaOTPKhongHopLe = new Label();
+            label_ThongBao = new Label();
             button_XacNhanOTP = new Button();
             textBox_OTP = new TextBox();
             label_NhapMaOTP = new Label();
@@ -53,7 +53,7 @@
             // panel_OTP
             // 
             panel_OTP.BorderStyle = BorderStyle.FixedSingle;
-            panel_OTP.Controls.Add(label_MaOTPKhongHopLe);
+            panel_OTP.Controls.Add(label_ThongBao);
             panel_OTP.Controls.Add(button_XacNhanOTP);
             panel_OTP.Controls.Add(textBox_OTP);
             panel_OTP.Controls.Add(label_NhapMaOTP);
@@ -62,16 +62,14 @@
             panel_OTP.Size = new Size(456, 213);
             panel_OTP.TabIndex = 8;
             // 
-            // label_MaOTPKhongHopLe
+            // label_ThongBao
             // 
-            label_MaOTPKhongHopLe.AutoSize = true;
-            label_MaOTPKhongHopLe.ForeColor = Color.DarkCyan;
-            label_MaOTPKhongHopLe.Location = new Point(117, 18);
-            label_MaOTPKhongHopLe.Name = "label_MaOTPKhongHopLe";
-            label_MaOTPKhongHopLe.Size = new Size(213, 20);
-            label_MaOTPKhongHopLe.TabIndex = 25;
-            label_MaOTPKhongHopLe.Text = "Mã xác nhận OTP không hợp lệ";
-            label_MaOTPKhongHopLe.Visible = false;
+            label_ThongBao.ForeColor = Color.DarkCyan;
+            label_ThongBao.Location = new Point(19, 18);
+            label_ThongBao.Name = "label_ThongBao";
+            label_ThongBao.Size = new Size(413, 20);
+            label_ThongBao.TabIndex = 25;
+            label_ThongBao.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button_XacNhanOTP
             // 
@@ -110,7 +108,7 @@
             button_DangKy.UseVisualStyleBackColor = true;
             button_DangKy.Click += button_DangKy_Click;
             // 
-            // XacNhanOTP
+            // OTPDangKy
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -121,7 +119,7 @@
             Controls.Add(panel_OTP);
             Controls.Add(label_XacNhanOTP);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "XacNhanOTP";
+            Name = "OTPDangKy";
             panel_OTP.ResumeLayout(false);
             panel_OTP.PerformLayout();
             ResumeLayout(false);
@@ -132,7 +130,7 @@
 
         private Label label_XacNhanOTP;
         private Panel panel_OTP;
-        private Label label_MaOTPKhongHopLe;
+        private Label label_ThongBao;
         private Button button_XacNhanOTP;
         private TextBox textBox_OTP;
         private Label label_NhapMaOTP;

@@ -13,7 +13,7 @@ namespace BLL
     public class OTP_BLL
     {
 
-        public static void SendOTP(string email,string confirmWhat)
+        public static void SendOTP(string email,string sendWhat)
         {
             //Tạo code OTP random 6 chữ số
             int otpCode = new Random().Next(100000, 999999);
@@ -26,12 +26,12 @@ namespace BLL
             const string fromPass = "yywutphsverkqeji"; //Mật khẩu ứng dụng tạo qua google
             string mailSubject = "";
 
-            if (confirmWhat == "Register")
+            if (sendWhat == "Register")
             {
                 mailSubject = "Đăng ký tài khoản sân bóng Trí Hải - Mã xác thực OTP"; //Tiêu đề mail gửi mã tạo tài khoản
                 
             }
-            if (confirmWhat == "ChangePassword")
+            if (sendWhat == "ChangePassword")
             {
                 mailSubject = "Đổi mật khẩu tài khoản sân bóng Trí Hải - Mã xác thực OTP"; //Tiêu đề mail gửi mã đổi mật khẩu
             }

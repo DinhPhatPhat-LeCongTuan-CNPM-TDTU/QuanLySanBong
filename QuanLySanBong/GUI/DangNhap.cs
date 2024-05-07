@@ -15,6 +15,7 @@ namespace GUI
     public partial class DangNhap : Form
     {
         private Software softwareInstance;
+
         public DangNhap(Software softwareInstance)
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace GUI
 
             else if (soDienThoai_Email.Contains('\'') || matKhau.Contains('\''))
             {
-                label_ThongBao.Text = "Thông tin đăng nhập chứa  ký tự không hợp lệ";
+                label_ThongBao.Text = "Thông tin đăng nhập chứa ký tự không hợp lệ";
                 ClearThongBao();
                 return;
             }
@@ -60,13 +61,17 @@ namespace GUI
                         Properties.Settings.Default.matKhau = "";
                         Properties.Settings.Default.Save();
                     }
-                    label_ThongBao.Text = "Đăng nhâp với tư cách quản lý thành công";
-                    ClearThongBao();
+                    //Đăng nhập với tư cách quản lý thành công
+                    softwareInstance.isLoged = true;
+                    softwareInstance.isAdmin = true;
+                    softwareInstance.changePanelShow(new TaiKhoanQuanLy(softwareInstance));
+
                 }
                 else
                 {
                     label_ThongBao.Text = "Thông tin đăng nhập không hợp lệ";
                     ClearThongBao();
+
                 }
                 return;
             }
@@ -87,8 +92,10 @@ namespace GUI
                         Properties.Settings.Default.matKhau = "";
                         Properties.Settings.Default.Save();
                     }
+                    //Đăng nhập với tư cách khách hàng thành công
                     label_ThongBao.Text = "Đăng nhâp với tư cách khách hàng thành công";
-                    ClearThongBao();
+                    softwareInstance.isLoged = true;
+                    softwareInstance.changePanelShow(new TaiKhoanKhachHang(softwareInstance));
                 }
                 else
                 {

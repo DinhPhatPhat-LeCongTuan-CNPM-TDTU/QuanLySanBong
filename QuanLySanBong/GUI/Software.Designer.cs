@@ -37,7 +37,7 @@
             button_TrangChu = new Button();
             pictureBox_TrangChu = new PictureBox();
             panel_DatSan = new Panel();
-            button_Book = new Button();
+            button_DatSan = new Button();
             pictureBox_DatSan = new PictureBox();
             panel_TaiKhoan = new Panel();
             button_TaiKhoan = new Button();
@@ -127,6 +127,7 @@
             button_TrangChu.TabIndex = 5;
             button_TrangChu.Text = "Trang Chủ";
             button_TrangChu.UseVisualStyleBackColor = false;
+            button_TrangChu.Click += button_TrangChu_Click;
             button_TrangChu.MouseEnter += button_TrangChu_MouseEnter;
             button_TrangChu.MouseLeave += button_TrangChu_MouseLeave;
             // 
@@ -143,27 +144,28 @@
             // panel_DatSan
             // 
             panel_DatSan.BackColor = Color.FromArgb(79, 111, 82);
-            panel_DatSan.Controls.Add(button_Book);
+            panel_DatSan.Controls.Add(button_DatSan);
             panel_DatSan.Controls.Add(pictureBox_DatSan);
             panel_DatSan.Location = new Point(3, 56);
             panel_DatSan.Name = "panel_DatSan";
             panel_DatSan.Size = new Size(206, 47);
             panel_DatSan.TabIndex = 11;
             // 
-            // button_Book
+            // button_DatSan
             // 
-            button_Book.BackColor = Color.Transparent;
-            button_Book.FlatStyle = FlatStyle.Flat;
-            button_Book.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button_Book.ForeColor = Color.White;
-            button_Book.Location = new Point(65, 0);
-            button_Book.Name = "button_Book";
-            button_Book.Size = new Size(141, 47);
-            button_Book.TabIndex = 5;
-            button_Book.Text = "Đặt Sân";
-            button_Book.UseVisualStyleBackColor = false;
-            button_Book.MouseEnter += button_TrangChu_MouseEnter;
-            button_Book.MouseLeave += button_TrangChu_MouseLeave;
+            button_DatSan.BackColor = Color.Transparent;
+            button_DatSan.FlatStyle = FlatStyle.Flat;
+            button_DatSan.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_DatSan.ForeColor = Color.White;
+            button_DatSan.Location = new Point(65, 0);
+            button_DatSan.Name = "button_DatSan";
+            button_DatSan.Size = new Size(141, 47);
+            button_DatSan.TabIndex = 5;
+            button_DatSan.Text = "Đặt Sân";
+            button_DatSan.UseVisualStyleBackColor = false;
+            button_DatSan.Click += button_DatSan_Click;
+            button_DatSan.MouseEnter += button_TrangChu_MouseEnter;
+            button_DatSan.MouseLeave += button_TrangChu_MouseLeave;
             // 
             // pictureBox_DatSan
             // 
@@ -291,7 +293,7 @@
         private Button button_TrangChu;
         private PictureBox pictureBox_TrangChu;
         private Panel panel_DatSan;
-        private Button button_Book;
+        private Button button_DatSan;
         private PictureBox pictureBox_DatSan;
         private Panel panel_TaiKhoan;
         private Button button_TaiKhoan;
