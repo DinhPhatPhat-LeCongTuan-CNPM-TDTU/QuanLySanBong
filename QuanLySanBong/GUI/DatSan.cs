@@ -122,7 +122,8 @@ namespace GUI
             int phutDa = Convert.ToInt32(comboBox_SoPhutDa.SelectedItem);
             int tongTien = 0;
             PhieuDatSan phieuDatSan = new PhieuDatSan(maPhieuDatSan,maKhachHang,maQuanLy,loaiSan,ngayDatSan,ngayDa,phutDa,tongTien);
-            PhieuDatSan_BLL.AddPhieuDatSan(phieuDatSan);
+            string maPhieuDatSan_ChiTietPhieuDatSan = PhieuDatSan_BLL.AddPhieuDatSan(phieuDatSan);
+            ChiTietPhieuDatSan_BLL.AddChiTietPhieuDatSan(maPhieuDatSan_ChiTietPhieuDatSan, comboBox_ChonSan.SelectedItem.ToString());
             label_ThongBao.Text = "Đặt sân thành công, bạn có thể xem lại phiếu đặt sân trong mục Tài Khoản";
         }
     }

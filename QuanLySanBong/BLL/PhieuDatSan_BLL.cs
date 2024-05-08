@@ -18,17 +18,18 @@ namespace BLL
 
             }
         }*/
-        public static void AddPhieuDatSan(PhieuDatSan phieuDatSan)
+        public static string AddPhieuDatSan(PhieuDatSan phieuDatSan)
         {
             phieuDatSan.maPhieuDatSan = autoCreateMaPhieuDatSan();
             PhieuDatSanAccess.AddPhieuDatSan(phieuDatSan);
+            return phieuDatSan.maPhieuDatSan;
         }
 
         private static string autoCreateMaPhieuDatSan()
         {
             if (PhieuDatSanAccess.SelectAllPhieuDatSan().Rows.Count == 0)
             {
-                return "DS10000000";
+                return "DS00000000";
             }
             else
             {
@@ -36,7 +37,7 @@ namespace BLL
                 string maHienTaiString = dataTable.Rows[0]["maPhieuDatSan"].ToString();
                 string tamSoCuoiString = maHienTaiString.Substring(maHienTaiString.Length - 8);
                 int tamSoCuoiIntPlussOne = int.Parse(tamSoCuoiString) + 1;
-                string newPhieuDatSan = "DS" + tamSoCuoiIntPlussOne;
+                string newPhieuDatSan = "DS" + tamSoCuoiIntPlussOne.ToString("D8");
                 return newPhieuDatSan;
             }
         }

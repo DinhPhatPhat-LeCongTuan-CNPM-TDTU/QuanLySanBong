@@ -94,15 +94,15 @@ namespace BLL
         {
             if (KhachHangAccess.SelectAllKhachHang().Rows.Count == 0)
             {
-                return "KH10000000";
+                return "KH00000000";
             }
             else
             {
                 DataTable dataTable = KhachHangAccess.SelectTop1KhachHang();
                 string maHienTaiString = dataTable.Rows[0]["maKhachHang"].ToString();
-                string tamSoCuoiString = maHienTaiString.Substring(maHienTaiString.Length - 8);
+                string tamSoCuoiString = maHienTaiString.Substring(maHienTaiString.Length - 8).ToString();
                 int tamSoCuoiIntPlussOne = int.Parse(tamSoCuoiString) + 1;
-                string newMaKhachHang = "KH" + tamSoCuoiIntPlussOne;
+                string newMaKhachHang = "KH" + tamSoCuoiIntPlussOne.ToString("D8");
                 return newMaKhachHang;
             }
         }

@@ -48,5 +48,17 @@
   + Đã có thể đặt sân và thêm phiếu đặt sân vào cơ sở dữ liệu (Bảng PhieuDatSan)
 
 - Mục tiêu tiếp theo: 
+  + ChiTietPhieuDatSan
+  + Kiểm tra lịch đăng ký và ngăn chặn đăng ký nếu trùng, thời điểm đăng ký trong quá khứ
+  + Form XemLichDaDangKy hiển thị những khung giờ đã bị đăng ký trong từng ngày
+
+- #################################################################
+- 11:59 8/5
+- DAL: ChiTietPhieuDatSanAccess
+- BLL: ChiTietPhieuDatSan_BLL
+- GUI: 
+  + Khi đặt sân đã thêm dữ liệu vào PhieuDatSan và ChiTietPhieuDatSan
+
+- Mục tiêu tiếp theo: 
   + Kiểm tra lịch đăng ký và ngăn chặn đăng ký nếu trùng, thời điểm đăng ký trong quá khứ
   + Form XemLichDaDangKy hiển thị những khung giờ đã bị đăng ký trong từng ngày

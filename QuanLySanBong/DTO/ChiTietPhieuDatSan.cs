@@ -8,9 +8,9 @@ namespace DTO
 {
     public class ChiTietPhieuDatSan
     {
-        private string maPhieuDatSan {  get; set; }
-	    private string maSanBong { get; set; }
-	    private int donGia { get; set; }
+        public string maPhieuDatSan {  get; set; }
+        public string maSanBong { get; set; }
+        public int donGia { get; set; }
 
         public ChiTietPhieuDatSan(string maPhieuDatSan, string maSanBong, int donGia)
         {

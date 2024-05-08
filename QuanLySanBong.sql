@@ -9,6 +9,12 @@ create table SanBong(
 	primary key(maSanBong)
 )
 
+insert into SanBong values
+('SB01',N'Sân 1'),('SB02',N'Sân 2'),('SB03',N'Sân 3'),
+('SB04',N'Sân 4'),('SB05',N'Sân 5'),('SB06',N'Sân 6'),
+('SB07',N'Sân 7'),('SB08',N'Sân 8'),('SB09',N'Sân 9'),
+('SB10',N'Sân 10'),('SB11',N'Sân 11'),('SB12',N'Sân 12')
+
 create table KhachHang(
 	maKhachHang varchar(10),
 	tenKhachHang nvarchar(50),
@@ -114,5 +120,7 @@ insert into QuanLy values (
 select * from KhachHang
 delete from KhachHang where (email='dinhtainang@gmail.com')
 print datetime
-
+delete from PhieuDatSan where 1=1
+delete from ChiTietPhieuDatSan where 1=1
 select * from PhieuDatSan
+select * from  ChiTietPhieuDatSan
