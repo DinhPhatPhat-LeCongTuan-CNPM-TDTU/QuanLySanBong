@@ -53,7 +53,7 @@
   + Form XemLichDaDangKy hiển thị những khung giờ đã bị đăng ký trong từng ngày
 
 - #################################################################
-- 11:59 8/5
+- 23:59 8/5
 - DAL: ChiTietPhieuDatSanAccess
 - BLL: ChiTietPhieuDatSan_BLL
 - GUI: 
