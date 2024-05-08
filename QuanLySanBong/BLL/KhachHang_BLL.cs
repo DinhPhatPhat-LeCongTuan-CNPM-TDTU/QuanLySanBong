@@ -14,9 +14,9 @@ namespace BLL
     public class KhachHang_BLL
     {
 
-        public static bool checkLoginValid(string email_soDienThoai, string matKhau)
+        public static bool checkLoginValid(string soDienThoai_email, string matKhau)
         {
-            return KhachHangAccess.CheckLoginValid(email_soDienThoai, matKhau);
+            return KhachHangAccess.CheckLoginValid(soDienThoai_email, matKhau);
 
         }
 
@@ -39,6 +39,49 @@ namespace BLL
             return false;
         }
 
+        public static KhachHang selectOneKhachHang(string soDienThoai_email)
+        {
+            string dieuKien = $"email = '{soDienThoai_email}'";
+            DataTable dt = KhachHangAccess.SelectOneKhachHang(dieuKien);
+            if (dt.Rows.Count > 0) 
+            {
+                DataRow row = dt.Rows[0];
+                string maKhachHang = row["maKhachHang"].ToString();
+                string tenKhachHang = row["tenKhachHang"].ToString();
+                string soDienThoai = row["soDienThoai"].ToString();
+                string email = row["email"].ToString();
+                string matKhau = row["matKhau"].ToString();
+                string gioiTinh = row["gioiTinh"].ToString();
+                DateTime ngaySinh = (DateTime)row["ngaySinh"];
+                string diaChi = row["diaChi"].ToString();
+                int soLanDatSan = Convert.ToInt32(row["soLanDatSan"]);
+                // Khởi tạo đối tượng KhachHang với các giá trị đã trích xuất
+                KhachHang khachHang = new KhachHang(maKhachHang, tenKhachHang, soDienThoai, email, matKhau, gioiTinh, ngaySinh, diaChi, soLanDatSan);
+                // Trả về đối tượng KhachHang đã khởi tạo
+                return khachHang;
+            }
+            else
+            {
+                dieuKien = $"soDienThoai = '{soDienThoai_email}'";
+                dt = KhachHangAccess.SelectOneKhachHang(dieuKien);
+                    DataRow row = dt.Rows[0];
+                    string maKhachHang = row["maKhachHang"].ToString();
+                    string tenKhachHang = row["tenKhachHang"].ToString();
+                    string soDienThoai = row["soDienThoai"].ToString();
+                    string email = row["email"].ToString();
+                    string matKhau = row["matKhau"].ToString();
+                    string gioiTinh = row["gioiTinh"].ToString();
+                    DateTime ngaySinh = (DateTime)row["ngaySinh"];
+                    string diaChi = row["diaChi"].ToString();
+                    int soLanDatSan = Convert.ToInt32(row["soLanDatSan"]);
+                    // Khởi tạo đối tượng KhachHang với các giá trị đã trích xuất
+                    KhachHang khachHang = new KhachHang(maKhachHang, tenKhachHang, soDienThoai, email, matKhau, gioiTinh, ngaySinh, diaChi, soLanDatSan);
+                    // Trả về đối tượng KhachHang đã khởi tạo
+                    return khachHang;
+            }
+            
+        }
+
         //Phương thức thêm khách hàng mới vào database (tạo tài khoản thành công)
         public static void AddKhachHang(KhachHang khachHang)
         {
@@ -51,7 +94,7 @@ namespace BLL
         {
             if (KhachHangAccess.SelectAllKhachHang().Rows.Count == 0)
             {
-                return "KH00000000";
+                return "KH10000000";
             }
             else
             {

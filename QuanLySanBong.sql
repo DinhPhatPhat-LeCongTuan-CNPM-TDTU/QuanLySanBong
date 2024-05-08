@@ -1,17 +1,17 @@
-create database QuanLySanBong
+﻿create database QuanLySanBong
 use QuanLySanBong
 
 set dateformat dmy
 
 create table SanBong(
-	maSan varchar(10),
-	tenSan nvarchar(50),
-	primary key(maSan)
+	maSanBong varchar(10),
+	tenSanBong nvarchar(50),
+	primary key(maSanBong)
 )
 
 create table KhachHang(
 	maKhachHang varchar(10),
-	tenKhachHang varchar(50),
+	tenKhachHang nvarchar(50),
 	soDienThoai varchar(10),
 	email varchar(50),
 	matKhau varchar(50),
@@ -28,7 +28,30 @@ create table OTP(
 	primary key(email)
 )
 
-drop table OTP
+create table PhieuDatSan(
+	maPhieuDatSan varchar(10),
+	maKhachHang varchar(10),
+	maQuanLy varchar(10),
+	loaiSan int,
+	ngayDatSan smalldatetime,
+	ngayDa smalldatetime,
+	phutDa int,
+	tongTien int,
+	tinhTrangXacNhan nvarchar(255),
+	tinhTrangThanhToan nvarchar(255),
+	primary key (maPhieuDatSan),
+	foreign key (maKhachHang) references KhachHang(maKhachHang),
+	foreign key (maQuanLy) references QuanLy(maQuanLy)
+)
+
+create table ChiTietPhieuDatSan(
+	maPhieuDatSan varchar(10),
+	maSanBong varchar(10),
+	donGia int,
+	primary key (maPhieuDatSan, maSanBong),
+	foreign key (maPhieuDatSan) references PhieuDatSan(maPhieuDatSan),
+	foreign key (maSanBong) references SanBong(maSanBong),
+)
 
 /*Ma khach hang phat sinh tu dong, KHXXYYYYYY,
 KH la viet tat cua KH
@@ -72,6 +95,14 @@ create table QuanLy(
 )
 
 insert into QuanLy values (
+	'',
+	'',
+	'',
+	'',
+	'',
+	0
+)
+insert into QuanLy values (
 	'AD001',
 	'Le Cong Tuan',
 	'0123456789',
@@ -83,3 +114,5 @@ insert into QuanLy values (
 select * from KhachHang
 delete from KhachHang where (email='dinhtainang@gmail.com')
 print datetime
+
+select * from PhieuDatSan

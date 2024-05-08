@@ -18,6 +18,18 @@ namespace DTO
 		public string diaChi { get; set; }
 		public int soLanDatSan { get; set; }
 
+		public KhachHang(string maKhachHang, string tenKhachHang, string soDienThoai, string email, string matKhau, string gioiTinh, DateTime ngaySinh, string diaChi, int soLanDatSan)
+		{
+            this.maKhachHang = maKhachHang;
+            this.tenKhachHang = tenKhachHang;
+            this.soDienThoai = soDienThoai;
+            this.email = email;
+            this.matKhau = matKhau;
+            this.soLanDatSan = soLanDatSan;
+            this.gioiTinh = gioiTinh;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+        }
 		public KhachHang(string maKhachHang, string tenKhachHang, string soDienThoai, string email, string matKhau)
 		{
 			this.maKhachHang = maKhachHang;

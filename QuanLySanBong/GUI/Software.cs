@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using DTO;
+using System.Drawing;
 namespace GUI
 {
     public partial class Software : Form
@@ -6,6 +7,7 @@ namespace GUI
         public bool isLoged = false;
         public bool isAdmin = false;
         private string childFormNow = "";
+        public KhachHang khachHang;
         public Software()
         {
             InitializeComponent();

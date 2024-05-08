@@ -95,6 +95,7 @@ namespace GUI
                     //Đăng nhập với tư cách khách hàng thành công
                     label_ThongBao.Text = "Đăng nhâp với tư cách khách hàng thành công";
                     softwareInstance.isLoged = true;
+                    softwareInstance.khachHang = KhachHang_BLL.selectOneKhachHang(soDienThoai_Email);
                     softwareInstance.changePanelShow(new TaiKhoanKhachHang(softwareInstance));
                 }
                 else

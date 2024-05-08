@@ -29,10 +29,10 @@ namespace DAL
             return Connection.selectQuery(query);
         }
 
-        public static bool CheckLoginValid(string email_soDienThoai, string matKhau)
+        public static bool CheckLoginValid(string soDienThoai_email, string matKhau)
         {
             string query = $@"Select * from KhachHang 
-                            where (soDienThoai = '{email_soDienThoai}' and matKhau = '{matKhau}')";
+                            where (soDienThoai = '{soDienThoai_email}' and matKhau = '{matKhau}')";
             
             if (Connection.selectQuery(query).Rows.Count > 0)
             {
@@ -40,7 +40,7 @@ namespace DAL
                 return true;
             }
 
-            query = $@"Select * from KhachHang where ( email = '{email_soDienThoai}' and
+            query = $@"Select * from KhachHang where ( email = '{soDienThoai_email}' and
                              matKhau = '{matKhau}')";
             if (Connection.selectQuery(query).Rows.Count > 0)
             {
