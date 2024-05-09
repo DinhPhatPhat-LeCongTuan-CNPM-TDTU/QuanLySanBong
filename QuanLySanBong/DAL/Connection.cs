@@ -34,5 +34,13 @@ namespace DAL
             dataAdapter.Fill(dt);
             return dt;
         }
+
+        public static int countQuery(string sql)
+        {
+            Connect();
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            int count = (int)cmd.ExecuteScalar();
+            return count;
+        }
     }
 }

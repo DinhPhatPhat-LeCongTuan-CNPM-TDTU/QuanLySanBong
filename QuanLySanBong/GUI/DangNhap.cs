@@ -29,7 +29,7 @@ namespace GUI
             string soDienThoai_Email = textBox_SoDienThoai_Email.Text;
             string matKhau = textBox_MatKhau.Text;
 
-            
+
             if (soDienThoai_Email.Trim() == "" || matKhau.Trim() == "")
             {
                 label_ThongBao.Text = "Vui lòng điền đầy đủ thông tin đăng nhập";
@@ -125,6 +125,9 @@ namespace GUI
             textBox_MatKhau.UseSystemPasswordChar = textBox_MatKhau.PasswordChar == '\0' ? true : false;
         }
 
-
+        private void button_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+            softwareInstance.changePanelShow(new DoiMatKhau(softwareInstance));
+        }
     }
 }

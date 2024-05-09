@@ -11,13 +11,6 @@ namespace BLL
 {
     public class PhieuDatSan_BLL
     {
-        /*public static string checkDatSan(PhieuDatSan phieuDatSan)
-        {
-            if (phieuDatSan.loaiSan == "")
-            {
-
-            }
-        }*/
         public static string AddPhieuDatSan(PhieuDatSan phieuDatSan)
         {
             phieuDatSan.maPhieuDatSan = autoCreateMaPhieuDatSan();
@@ -40,6 +33,11 @@ namespace BLL
                 string newPhieuDatSan = "DS" + tamSoCuoiIntPlussOne.ToString("D8");
                 return newPhieuDatSan;
             }
+        }
+
+        public static DataTable XemLichSuDatSan(string maKhachHang)
+        {
+            return PhieuDatSanAccess.XemLichSuDatSan(maKhachHang);
         }
     }
 }

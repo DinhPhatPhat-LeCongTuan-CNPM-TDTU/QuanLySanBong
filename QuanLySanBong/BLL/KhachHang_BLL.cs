@@ -106,5 +106,15 @@ namespace BLL
                 return newMaKhachHang;
             }
         }
+
+        public static bool UpdateKhachHang(string maKhachHang, string tenKhachHang, string gioiTinh, DateTime ngaySinh, string diaChi)
+        {
+            return KhachHangAccess.UpdateKhachHang(maKhachHang, tenKhachHang, gioiTinh, ngaySinh, diaChi);
+        }
+
+        public static bool DoiMatKhau(string email, string matKhauMoi)
+        {
+            return KhachHangAccess.DoiMatKhau(email, matKhauMoi);
+        }
     }
 }

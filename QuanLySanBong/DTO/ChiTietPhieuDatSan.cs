@@ -18,5 +18,6 @@ namespace DTO
             this.maSanBong = maSanBong;
             this.donGia = donGia;
         }
+
     }
 }

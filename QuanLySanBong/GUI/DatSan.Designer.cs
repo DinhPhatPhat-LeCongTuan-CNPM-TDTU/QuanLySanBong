@@ -106,16 +106,17 @@
             groupBox_DatSan.Controls.Add(label_NgayDa);
             groupBox_DatSan.Location = new Point(286, 35);
             groupBox_DatSan.Name = "groupBox_DatSan";
-            groupBox_DatSan.Size = new Size(495, 442);
+            groupBox_DatSan.Size = new Size(495, 477);
             groupBox_DatSan.TabIndex = 5;
             groupBox_DatSan.TabStop = false;
             // 
             // label_ThongBao
             // 
-            label_ThongBao.ForeColor = Color.Red;
-            label_ThongBao.Location = new Point(46, 401);
+            label_ThongBao.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label_ThongBao.ForeColor = Color.Snow;
+            label_ThongBao.Location = new Point(11, 382);
             label_ThongBao.Name = "label_ThongBao";
-            label_ThongBao.Size = new Size(391, 25);
+            label_ThongBao.Size = new Size(478, 89);
             label_ThongBao.TabIndex = 10;
             label_ThongBao.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -182,6 +183,7 @@
             button_KhungGioDaBiDat.TabIndex = 4;
             button_KhungGioDaBiDat.Text = "Xem khung giờ đã bị đặt";
             button_KhungGioDaBiDat.UseVisualStyleBackColor = true;
+            button_KhungGioDaBiDat.Click += button_KhungGioDaBiDat_Click;
             // 
             // comboBox_LoaiSan
             // 

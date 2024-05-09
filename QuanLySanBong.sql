@@ -40,8 +40,8 @@ create table PhieuDatSan(
 	maQuanLy varchar(10),
 	loaiSan int,
 	ngayDatSan smalldatetime,
-	ngayDa smalldatetime,
-	phutDa int,
+	thoiGianDa smalldatetime,
+	thoiGianKetThuc smalldatetime,
 	tongTien int,
 	tinhTrangXacNhan nvarchar(255),
 	tinhTrangThanhToan nvarchar(255),
@@ -49,6 +49,9 @@ create table PhieuDatSan(
 	foreign key (maKhachHang) references KhachHang(maKhachHang),
 	foreign key (maQuanLy) references QuanLy(maQuanLy)
 )
+
+drop table PhieuDatSan
+drop table ChiTietPhieuDatSan
 
 create table ChiTietPhieuDatSan(
 	maPhieuDatSan varchar(10),
@@ -99,7 +102,9 @@ create table QuanLy(
 	toanQuyen bit
 	primary key(maQuanLy)
 )
-
+drop table QuanLy
+select * from QuanLy
+delete from QuanLy where 1=1
 insert into QuanLy values (
 	'',
 	'',
@@ -108,6 +113,8 @@ insert into QuanLy values (
 	'',
 	0
 )
+
+select * from QuanLyNhanSu
 insert into QuanLy values (
 	'AD001',
 	'Le Cong Tuan',
@@ -124,3 +131,4 @@ delete from PhieuDatSan where 1=1
 delete from ChiTietPhieuDatSan where 1=1
 select * from PhieuDatSan
 select * from  ChiTietPhieuDatSan
+

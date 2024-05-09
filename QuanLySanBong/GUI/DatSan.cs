@@ -104,27 +104,55 @@ namespace GUI
 
         private void button_DatSan_Click(object sender, EventArgs e)
         {
-            if (comboBox_LoaiSan.SelectedIndex == -1 || comboBox_GioDa.SelectedIndex ==-1 || comboBox_SoPhutDa.SelectedIndex== -1 || comboBox_ChonSan.SelectedIndex== -1)
+            if (comboBox_LoaiSan.SelectedIndex == -1 || comboBox_GioDa.SelectedIndex == -1 || comboBox_SoPhutDa.SelectedIndex == -1 || comboBox_ChonSan.SelectedIndex == -1)
             {
                 label_ThongBao.Text = "Bạn chưa nhập đủ thông tin đặt sân";
                 return;
             }
+            DateTime thoiGianDa = dateTimePicker_NgayDa.Value.Date;
+            string[] gioPhut = comboBox_GioDa.SelectedItem.ToString().Split(':');
+            int gio = int.Parse(gioPhut[0]);
+            int phut = int.Parse(gioPhut[1]);
+            thoiGianDa = thoiGianDa.AddHours(gio).AddMinutes(phut);
+            DateTime thoiGianKetThuc = thoiGianDa.AddMinutes(Convert.ToInt32(comboBox_SoPhutDa.SelectedItem));
+
+            if (thoiGianDa.CompareTo(DateTime.Now) < 0)
+            {
+                label_ThongBao.Text = "Thời điểm đá đã qua, vui lòng xem lại";
+                return;
+            }
+
+            //Kiểm tra dữ liệu theo ngày đá, giờ đá, đá trong bao lâu coi có trùng không
+            if (ChiTietPhieuDatSan_BLL.CheckTrungGioDa(thoiGianDa, thoiGianKetThuc, GetListSanBong()))
+            {
+                label_ThongBao.Text = "Đã đăng ký trùng lịch, vui lòng chọn lịch trống";
+                return;
+            }
+
             string maPhieuDatSan = "";
             string maKhachHang = softwareInstance.khachHang.maKhachHang;
             string maQuanLy = "";
             int loaiSan = Convert.ToInt32(comboBox_LoaiSan.SelectedItem);
             DateTime ngayDatSan = DateTime.Now;
-            DateTime ngayDa = dateTimePicker_NgayDa.Value;
-            string[] gioPhut = comboBox_GioDa.SelectedItem.ToString().Split(':');
-            int gio = int.Parse(gioPhut[0]);
-            int phut = int.Parse(gioPhut[1]);
-            ngayDa = ngayDa.AddHours(gio).AddMinutes(phut);
-            int phutDa = Convert.ToInt32(comboBox_SoPhutDa.SelectedItem);
             int tongTien = 0;
-            PhieuDatSan phieuDatSan = new PhieuDatSan(maPhieuDatSan,maKhachHang,maQuanLy,loaiSan,ngayDatSan,ngayDa,phutDa,tongTien);
+            PhieuDatSan phieuDatSan = new PhieuDatSan(maPhieuDatSan, maKhachHang, maQuanLy, loaiSan, ngayDatSan, thoiGianDa, thoiGianKetThuc, tongTien);
             string maPhieuDatSan_ChiTietPhieuDatSan = PhieuDatSan_BLL.AddPhieuDatSan(phieuDatSan);
-            ChiTietPhieuDatSan_BLL.AddChiTietPhieuDatSan(maPhieuDatSan_ChiTietPhieuDatSan, comboBox_ChonSan.SelectedItem.ToString());
+            ChiTietPhieuDatSan_BLL.AddChiTietPhieuDatSan(maPhieuDatSan_ChiTietPhieuDatSan, GetListSanBong());
             label_ThongBao.Text = "Đặt sân thành công, bạn có thể xem lại phiếu đặt sân trong mục Tài Khoản";
+        }
+
+        private List<int> GetListSanBong()
+        {
+            string chonSan = comboBox_ChonSan.SelectedItem.ToString();
+            string[] split = chonSan.Replace("Sân ", "").Split('-');
+            List<int> list = new List<int>();
+            list = Array.ConvertAll(split, int.Parse).ToList();
+            return list;
+        }
+
+        private void button_KhungGioDaBiDat_Click(object sender, EventArgs e)
+        {
+            softwareInstance.changePanelShow(new XemKhungGioBiDat(softwareInstance, this));
         }
     }
 }

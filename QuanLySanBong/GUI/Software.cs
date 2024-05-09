@@ -8,9 +8,11 @@ namespace GUI
         public bool isAdmin = false;
         private string childFormNow = "";
         public KhachHang khachHang;
+        public QuanLy quanLy;
         public Software()
         {
             InitializeComponent();
+            changePanelShow(new TrangChu(this));
         }
 
         private void button_TrangChu_MouseEnter(object sender, EventArgs e)
@@ -63,14 +65,6 @@ namespace GUI
             formToShow.Show();
         }
 
-        private void Software_SizeChanged(object sender, EventArgs e)
-        {
-            //Khi form chính thay đổi kích thước, panel chứa form con cũng thay đổi kích thước
-            int newPanelWidth = (int)this.Width / (1080 / 850);
-            int newPanelHeight = (int)this.Height / (720 / 625);
-            panel_Container.Size = new Size(newPanelWidth, newPanelHeight);
-
-        }
 
         private void button_TrangChu_Click(object sender, EventArgs e)
         {

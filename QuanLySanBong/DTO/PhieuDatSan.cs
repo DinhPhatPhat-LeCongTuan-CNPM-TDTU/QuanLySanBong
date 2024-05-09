@@ -13,23 +13,23 @@ namespace DTO
         public string maQuanLy { get; set; }
         public int loaiSan { get; set; }
         public DateTime ngayDatSan { get; set; }
-        public DateTime ngayDa { get; set; }
-        public int phutDa { get; set; }
+        public DateTime thoiGianDa { get; set; }
+        public DateTime thoiGianKetThuc { get; set; }
         public int tongTien { get; set; }
         public string tinhTrangXacNhan { get; set; }
         public string tinhTrangThanhToan { get; set; }
 
         public PhieuDatSan(string maPhieuDatSan, string maKhachHang, string maQuanLy,
-            int loaiSan, DateTime ngayDatSan, DateTime ngayDa,
-            int phutDa, int tongTien)
+            int loaiSan, DateTime ngayDatSan, DateTime thoiGianDa,
+            DateTime thoiGianKetThuc, int tongTien)
         {
             this.maPhieuDatSan = maPhieuDatSan;
             this.maKhachHang = maKhachHang;
             this.maQuanLy = maQuanLy;
             this.loaiSan = loaiSan;
             this.ngayDatSan = ngayDatSan;
-            this.ngayDa = ngayDa;
-            this.phutDa = phutDa;
+            this.thoiGianDa = thoiGianDa;
+            this.thoiGianKetThuc = thoiGianKetThuc;
             this.tongTien = tongTien;
             this.tinhTrangXacNhan = "Chưa xác nhận";
             this.tinhTrangThanhToan = "Chưa thanh toán";

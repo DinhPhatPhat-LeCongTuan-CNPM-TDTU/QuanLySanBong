@@ -62,3 +62,19 @@
 - Mục tiêu tiếp theo: 
   + Kiểm tra lịch đăng ký và ngăn chặn đăng ký nếu trùng, thời điểm đăng ký trong quá khứ
   + Form XemLichDaDangKy hiển thị những khung giờ đã bị đăng ký trong từng ngày
+
+- #################################################################
+- 00:16 10/5
+- DAL: cập nhật: ChiTietPhieuDatSanAccess, PhieuDatSanAccess, OTPAcess, KhachHangAccess
+- BLL: ChiTietPhieuDatSan_BLL, PhieuDatSan_BLL, OTP_BLL, KhachHang_BLL
+- GUI: 
+  + Kiểm tra lịch đăng ký và ngăn chặn đăng ký nếu trùng, thời điểm đăng ký trong quá khứ
+  + Form XemLichDaDangKy hiển thị những khung giờ đã bị đăng ký trong từng ngày
+  + Form TaiKhoanNguoiDung hiện lên khi người dùng đăng nhập bằng tài khoản người dùng
+  + Trong TaiKhoanNguoiDung có thể xem lịch sử đặt sân của người đó
+  + Trong TaiKhoanNguoiDung có thể chỉnh sửa thông tin người dùng
+  + Đăng xuất sau khi đăng nhập
+  + Đổi mật khẩu bằng OTP qua email
+  + Form TaiKhoanQuanLy (Chưa hoàn thành)
+- Mục tiêu tiếp theo: 
+  + Hoàn thiện Form TaiKhoanQuanLy, gồm các chức năng : QuanLyDatSan, QuanLyTaiKhoanHeThong, DieuChinhGiaSan, ThongKeKinhDoanh (In ấn)

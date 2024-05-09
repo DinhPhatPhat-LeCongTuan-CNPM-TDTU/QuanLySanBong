@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
             label_DangNhap = new Label();
             panel_DangNhap = new Panel();
+            button_DoiMatKhau = new Button();
+            label_QuenMatKhau = new Label();
             label_ChuaCoTaiKhoan = new Label();
             button_DangKy = new Button();
             pictureBox_Show_Hind_Password = new PictureBox();
@@ -44,6 +46,7 @@
             pictureBox_DangNhap = new PictureBox();
             panel_ThongBao = new Panel();
             label_ThongBao = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panel_DangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Show_Hind_Password).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_DangNhap).BeginInit();
@@ -66,6 +69,8 @@
             // 
             panel_DangNhap.BackColor = Color.Transparent;
             panel_DangNhap.BorderStyle = BorderStyle.FixedSingle;
+            panel_DangNhap.Controls.Add(button_DoiMatKhau);
+            panel_DangNhap.Controls.Add(label_QuenMatKhau);
             panel_DangNhap.Controls.Add(label_ChuaCoTaiKhoan);
             panel_DangNhap.Controls.Add(button_DangKy);
             panel_DangNhap.Controls.Add(pictureBox_Show_Hind_Password);
@@ -78,13 +83,32 @@
             panel_DangNhap.Controls.Add(textBox_SoDienThoai_Email);
             panel_DangNhap.Location = new Point(141, 98);
             panel_DangNhap.Name = "panel_DangNhap";
-            panel_DangNhap.Size = new Size(566, 315);
+            panel_DangNhap.Size = new Size(566, 349);
             panel_DangNhap.TabIndex = 1;
+            // 
+            // button_DoiMatKhau
+            // 
+            button_DoiMatKhau.Location = new Point(227, 243);
+            button_DoiMatKhau.Name = "button_DoiMatKhau";
+            button_DoiMatKhau.Size = new Size(127, 32);
+            button_DoiMatKhau.TabIndex = 5;
+            button_DoiMatKhau.Text = "Đổi mật khẩu";
+            button_DoiMatKhau.UseVisualStyleBackColor = true;
+            button_DoiMatKhau.Click += button_DoiMatKhau_Click;
+            // 
+            // label_QuenMatKhau
+            // 
+            label_QuenMatKhau.AutoSize = true;
+            label_QuenMatKhau.Location = new Point(15, 249);
+            label_QuenMatKhau.Name = "label_QuenMatKhau";
+            label_QuenMatKhau.Size = new Size(190, 20);
+            label_QuenMatKhau.TabIndex = 10;
+            label_QuenMatKhau.Text = "Quên-muốn đổi mật khẩu ?";
             // 
             // label_ChuaCoTaiKhoan
             // 
             label_ChuaCoTaiKhoan.AutoSize = true;
-            label_ChuaCoTaiKhoan.Location = new Point(15, 267);
+            label_ChuaCoTaiKhoan.Location = new Point(70, 307);
             label_ChuaCoTaiKhoan.Name = "label_ChuaCoTaiKhoan";
             label_ChuaCoTaiKhoan.Size = new Size(135, 20);
             label_ChuaCoTaiKhoan.TabIndex = 9;
@@ -92,10 +116,10 @@
             // 
             // button_DangKy
             // 
-            button_DangKy.Location = new Point(156, 261);
+            button_DangKy.Location = new Point(227, 301);
             button_DangKy.Name = "button_DangKy";
-            button_DangKy.Size = new Size(391, 32);
-            button_DangKy.TabIndex = 5;
+            button_DangKy.Size = new Size(320, 32);
+            button_DangKy.TabIndex = 6;
             button_DangKy.Text = "Đăng ký tài khoản";
             button_DangKy.UseVisualStyleBackColor = true;
             button_DangKy.Click += button_DangKy_Click;
@@ -135,6 +159,8 @@
             // checkBox_GhiNhoDangNhap
             // 
             checkBox_GhiNhoDangNhap.AutoSize = true;
+            checkBox_GhiNhoDangNhap.Checked = true;
+            checkBox_GhiNhoDangNhap.CheckState = CheckState.Checked;
             checkBox_GhiNhoDangNhap.Location = new Point(15, 140);
             checkBox_GhiNhoDangNhap.Name = "checkBox_GhiNhoDangNhap";
             checkBox_GhiNhoDangNhap.Size = new Size(157, 24);
@@ -180,9 +206,9 @@
             // pictureBox_DangNhap
             // 
             pictureBox_DangNhap.Image = (Image)resources.GetObject("pictureBox_DangNhap.Image");
-            pictureBox_DangNhap.Location = new Point(171, 276);
+            pictureBox_DangNhap.Location = new Point(171, 318);
             pictureBox_DangNhap.Name = "pictureBox_DangNhap";
-            pictureBox_DangNhap.Size = new Size(495, 454);
+            pictureBox_DangNhap.Size = new Size(495, 412);
             pictureBox_DangNhap.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_DangNhap.TabIndex = 2;
             pictureBox_DangNhap.TabStop = false;
@@ -246,5 +272,8 @@
         private Button button_DangKy;
         private Panel panel_ThongBao;
         private Label label_ThongBao;
+        private Button button_DoiMatKhau;
+        private Label label_QuenMatKhau;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

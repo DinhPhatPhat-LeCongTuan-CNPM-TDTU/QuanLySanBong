@@ -31,13 +31,29 @@ namespace DAL
                             '{phieuDatSan.maQuanLy}',
                             '{phieuDatSan.loaiSan}',
                             '{phieuDatSan.ngayDatSan}',
-                            '{phieuDatSan.ngayDa}',
-                            '{phieuDatSan.phutDa}',
+                            '{phieuDatSan.thoiGianDa}',
+                            '{phieuDatSan.thoiGianKetThuc}',
                             '{phieuDatSan.tongTien}',
                             N'{phieuDatSan.tinhTrangXacNhan}',
                             N'{phieuDatSan.tinhTrangThanhToan}'
                             )";
             Connection.actionQuery(query);
-        } 
+        }
+
+        public static DataTable XemLichSuDatSan(string maKhachHang)
+        {
+            string query = $@"Select maPhieuDatSan as N'Mã phiếu',
+                            maQuanLy as N'Mã Quản Lý xác nhận',
+                            loaiSan as N'Loại sân',
+                            ngayDatSan as N'Ngày đặt sân',
+                            thoiGianDa as N'Thời gian đá',
+                            thoiGianKetThuc as N'Thời gian kết thúc',
+                            tongTien as N'Tổng tiền',
+                            tinhTrangXacNhan as N'Tình trạng xác nhận',
+                            tinhTrangThanhToan as N'Tình trạng thanh toán'
+                            from PhieuDatSan
+                            where maKhachHang = '{maKhachHang}'";
+                            return Connection.selectQuery(query);
+        }                           
     }
 }

@@ -64,5 +64,27 @@ namespace DAL
             {khachHang.soLanDatSan})";
             Connection.actionQuery(query);
         }
+
+        public static bool UpdateKhachHang(string maKhachHang, string tenKhachHang, string gioiTinh, DateTime ngaySinh, string diaChi)
+        {
+            try
+            {
+                string query = $"Update KhachHang set tenKhachHang = '{tenKhachHang}', gioiTinh = '{gioiTinh}', ngaySinh= '{ngaySinh}', diaChi= '{diaChi}' where maKhachHang = '{maKhachHang}'";
+                Connection.actionQuery(query);
+                return true;
+            }
+            catch { return false; }
+
+        }
+
+        public static bool DoiMatKhau(string email, string matKhauMoi)
+        {
+            try
+            {
+                string query = $"Update KhachHang set matKhau = '{matKhauMoi}' where email = '{email}'";
+                return true;
+            }
+            catch { return false; }
+        }
     }
 }

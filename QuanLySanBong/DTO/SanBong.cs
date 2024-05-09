@@ -8,7 +8,7 @@ namespace DTO
 {
     public class SanBong
     {
-        private string maSan; 
-        private string tenSan; 
+        public string maSan {  get; set; } 
+        public string tenSan { get; set; }
     }
 }
