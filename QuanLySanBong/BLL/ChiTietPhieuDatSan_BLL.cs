@@ -29,5 +29,17 @@ namespace BLL
             return ChiTietPhieuDatSanAccess.XemLichSanBiDat(ngayXemLichSanBiDat);
         }
 
+        public static string SelectTenSanBongByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            DataTable dt = ChiTietPhieuDatSanAccess.SelectSanBongByMaPhieuDatSan(maPhieuDatSan);
+
+            string tenSan = "";
+            foreach (DataRow dr in dt.Rows)
+            {
+                tenSan += dr[1]+ " ";
+            }
+            return tenSan.Trim();
+        }
+
     }
 }

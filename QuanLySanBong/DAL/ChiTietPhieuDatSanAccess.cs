@@ -26,8 +26,13 @@ namespace DAL
         public static void FindSanBongToAddChiTietPhieuDatSan(string maPhieuDatSan,int haiSoCuoiMaSanBong)
         {
             string maSanBong = "SB"+haiSoCuoiMaSanBong.ToString("D2");
-            string query = $@"Insert into ChiTietPhieuDatSan values ('{maPhieuDatSan}','{maSanBong}',{2000})";
-            Connection.actionQuery(query);
+            string query1 = $"Select * from SanBong where maSanBong = '{maSanBong}'";
+            DataTable sanBongTable = Connection.selectQuery(query1);
+            SanBong sanBong = new SanBong(sanBongTable.Rows[0][0].ToString(), sanBongTable.Rows[0][1].ToString(), int.Parse(sanBongTable.Rows[0][2].ToString()));
+            string query2 = $"Insert into ChiTietPhieuDatSan values ('{maPhieuDatSan}','{sanBong.maSanBong}','{sanBong.giaSanTheoPhut}')";
+            Connection.actionQuery(query2);
+            //Cập nhật tổng tiền của PhieuDatSan
+            PhieuDatSanAccess.UpdateTongTienPhieuDatSanByMaPhieuDatSan(maPhieuDatSan);
         }
 
         public static bool CheckTrungGioDa(DateTime thoiGianDa, DateTime thoiGianKetThuc, List<int> list)
@@ -66,5 +71,17 @@ namespace DAL
             return Connection.selectQuery(query);
 
         }
+
+        public static DataTable SelectSanBongByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            string query = $"Select * from SanBong where maSanBong in (select maSanBong from ChiTietPhieuDatSan where maPhieuDatSan = '{maPhieuDatSan}')";
+            return Connection.selectQuery(query);
+        }
+        public static void DeleteChiTietPhieuDatSanByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            string query = $"Delete from ChiTietPhieuDatSan where maPhieuDatSan = '{maPhieuDatSan}'";
+            Connection.actionQuery(query);
+        }
+
     }
 }

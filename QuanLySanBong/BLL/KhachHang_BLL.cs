@@ -14,6 +14,10 @@ namespace BLL
     public class KhachHang_BLL
     {
 
+        public static DataTable SelectAllKhachHang()
+        {
+            return KhachHangAccess.SelectAllKhachHang();
+        }
         public static bool checkLoginValid(string soDienThoai_email, string matKhau)
         {
             return KhachHangAccess.CheckLoginValid(soDienThoai_email, matKhau);
@@ -115,6 +119,21 @@ namespace BLL
         public static bool DoiMatKhau(string email, string matKhauMoi)
         {
             return KhachHangAccess.DoiMatKhau(email, matKhauMoi);
+        }
+
+        public static KhachHang SelectOneKhachHangByMaKhachHang(string maKhachHang)
+        {
+            return KhachHangAccess.SelectOneKhachHangByMaKhachHang(maKhachHang);
+        }
+
+        public static KhachHang SelectOneKhachHangByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            return KhachHangAccess.SelectOneKhachHangByMaPhieuDatSan(maPhieuDatSan);
+        }
+
+        public static void DeleteKhachHangByMaKhachHang(string maKhachHang)
+        {
+            KhachHangAccess.DeleteKhachHangByMaKhachHang(maKhachHang);
         }
     }
 }

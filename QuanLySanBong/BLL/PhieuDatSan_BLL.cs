@@ -39,5 +39,19 @@ namespace BLL
         {
             return PhieuDatSanAccess.XemLichSuDatSan(maKhachHang);
         }
+        public static DataTable XemAllLichSuDatSanByNgayDa(DateTime ngayDa)
+        {
+            return PhieuDatSanAccess.XemAllLichSuDatSanByNgayDa(ngayDa);
+        }
+
+        public static void UpdateTinhTrangPhieuDatSan(string maPhieuDatSan, string tinhTrangXacNhan, string tinhTrangThanhToan, string maQuanLyThuTien)
+        {
+            PhieuDatSanAccess.UpdateTinhTrangPhieuDatSan(maPhieuDatSan,tinhTrangXacNhan, tinhTrangThanhToan, maQuanLyThuTien);
+        }
+
+        public static void DeletePhieuDatSanByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            PhieuDatSanAccess.DeletePhieuDatSanByMaPhieuDatSan(maPhieuDatSan);
+        }
     }
 }

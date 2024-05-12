@@ -41,7 +41,8 @@ namespace GUI
             string email = textBox_Email.Text;
             string matKhau = textBox_MatKhau.Text;
             string xacNhanMatKhau = textBox_XacNhanMatKhau.Text;
-
+            string allInput = tenKhachHang+soDienThoai+email+matKhau+xacNhanMatKhau;
+           
             if (string.IsNullOrEmpty(tenKhachHang) ||
                 string.IsNullOrEmpty(soDienThoai) ||
                 string.IsNullOrEmpty(email) ||
@@ -49,6 +50,12 @@ namespace GUI
                 string.IsNullOrEmpty(xacNhanMatKhau))
             {
                 label_ThongBao.Text = "Vui lòng điền đầy đủ thông tin đăng ký";
+                ClearThongBao();
+                return;
+            }
+            if (allInput.Contains("\'"))
+            {
+                label_ThongBao.Text = "Thông tin nhập chứa ký tự không hợp lệ: \'";
                 ClearThongBao();
                 return;
             }
@@ -73,13 +80,32 @@ namespace GUI
                 ClearThongBao();
                 return;
             }
+            if (!matKhau.Equals(xacNhanMatKhau))
+            {
+                label_ThongBao.Text = "Mật khẩu xác nhận không trùng khớp";
+                ClearThongBao();
+                return;
+            }
 
+            if (!Regex.IsMatch(soDienThoai, @"^\d{10}$"))
+            {
+                label_ThongBao.Text = "Số điện thoại không hợp lệ";
+                ClearThongBao();
+                return;
+            }
+
+            if(matKhau.Length < 6)
+            {
+                label_ThongBao.Text = "Mật khẩu phải có ít nhất 6 ký tự";
+                ClearThongBao();
+                return;
+            }
+
+            
 
             OTPDangKy xacNhanOTP = new OTPDangKy(softwareInstance,this);
             softwareInstance.changePanelShow(xacNhanOTP);
             //Gửi OTP cho mail đăng ký bằng mail dinhtainang@gmail.com
-
-
         }
 
         private bool CheckEmailValid(string email)

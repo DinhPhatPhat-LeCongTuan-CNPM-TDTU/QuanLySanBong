@@ -69,7 +69,7 @@ namespace DAL
         {
             try
             {
-                string query = $"Update KhachHang set tenKhachHang = '{tenKhachHang}', gioiTinh = '{gioiTinh}', ngaySinh= '{ngaySinh}', diaChi= '{diaChi}' where maKhachHang = '{maKhachHang}'";
+                string query = $"Update KhachHang set tenKhachHang = '{tenKhachHang}', gioiTinh = N'{gioiTinh}', ngaySinh= '{ngaySinh}', diaChi= N'{diaChi}' where maKhachHang = '{maKhachHang}'";
                 Connection.actionQuery(query);
                 return true;
             }
@@ -85,6 +85,71 @@ namespace DAL
                 return true;
             }
             catch { return false; }
+        }
+
+        public static KhachHang SelectOneKhachHangByMaKhachHang(string maKhachHang)
+        {
+            try
+            {
+                string query = $"Select * from KhachHang where MaKhachHang = '{maKhachHang}'";
+                DataTable dt = Connection.selectQuery(query);
+                string tenKhachHang = dt.Rows[0]["tenKhachHang"].ToString();
+                string email = dt.Rows[0]["email"].ToString();
+                string soDienThoai = dt.Rows[0]["soDienThoai"].ToString();
+                string matKhau = dt.Rows[0]["matKhau"].ToString();
+                string gioiTinh = dt.Rows[0]["gioiTinh"].ToString();
+                DateTime ngaySinh = DateTime.Parse(dt.Rows[0]["ngaySinh"].ToString());
+                string diaChi = dt.Rows[0]["diaChi"].ToString();
+                int soLanDatSan = int.Parse(dt.Rows[0]["soLanDatSan"].ToString());
+
+                KhachHang khachHang = new KhachHang(maKhachHang,tenKhachHang, soDienThoai, email, matKhau, gioiTinh, ngaySinh, diaChi, soLanDatSan);
+                return khachHang;               
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static KhachHang SelectOneKhachHangByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            try
+            {
+                string query = $"Select * from KhachHang where MaKhachHang IN ( Select MaKhachHang from PhieuDatSan where MaPhieuDatSan = '{maPhieuDatSan}')";
+                DataTable dt = Connection.selectQuery(query);
+                string maKhachHang = dt.Rows[0]["maKhachHang"].ToString();
+                string tenKhachHang = dt.Rows[0]["tenKhachHang"].ToString();
+                string email = dt.Rows[0]["email"].ToString();
+                string soDienThoai = dt.Rows[0]["soDienThoai"].ToString();
+                string matKhau = dt.Rows[0]["matKhau"].ToString();
+                string gioiTinh = dt.Rows[0]["gioiTinh"].ToString();
+                DateTime ngaySinh = DateTime.Parse(dt.Rows[0]["ngaySinh"].ToString());
+                string diaChi = dt.Rows[0]["diaChi"].ToString();
+                int soLanDatSan = int.Parse(dt.Rows[0]["soLanDatSan"].ToString());
+
+                KhachHang khachHang = new KhachHang(maKhachHang, tenKhachHang, soDienThoai, email, matKhau, gioiTinh, ngaySinh, diaChi, soLanDatSan);
+                return khachHang;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public static void UpdateSoLanDatSanThanhCong(string maPhieuDatSan)
+        {
+            string query = "UPDATE KhachHang SET soLanDatSan = (SELECT COUNT(maKhachHang) FROM PhieuDatSan WHERE TinhTrangThanhToan = N'Đã thanh toán' AND PhieuDatSan.maKhachHang = KhachHang.maKhachHang)";
+            Connection.actionQuery(query);
+        }
+
+        public static void DeleteKhachHangByMaKhachHang(string maKhachHang)
+        {
+            string query1 = $"Delete from ChiTietPhieuDatSan where maPhieuDatSan in (select maPhieuDatSan from PhieuDatSan where maKhachhang = '{maKhachHang}')";
+            Connection.actionQuery(query1);
+            string query2 = $"Delete from PhieuDatSan where maKhachHang = '{maKhachHang}'";
+            Connection.actionQuery(query2);
+            string query3 = $"Delete from KhachHang where maKhachHang = '{maKhachHang}'";
+            Connection.actionQuery(query3);
         }
     }
 }

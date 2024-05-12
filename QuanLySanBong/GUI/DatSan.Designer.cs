@@ -230,7 +230,8 @@
             // 
             // dateTimePicker_NgayDa
             // 
-            dateTimePicker_NgayDa.Format = DateTimePickerFormat.Short;
+            dateTimePicker_NgayDa.CustomFormat = "dd/MM/yyyy";
+            dateTimePicker_NgayDa.Format = DateTimePickerFormat.Custom;
             dateTimePicker_NgayDa.Location = new Point(164, 103);
             dateTimePicker_NgayDa.Name = "dateTimePicker_NgayDa";
             dateTimePicker_NgayDa.Size = new Size(125, 27);

@@ -30,6 +30,13 @@ namespace GUI
                 return;
             }
 
+            if ((textBox_Email.Text + textBox_MatKhauMoi.Text).Contains('\''))
+            {
+                label_ThongBao.Text = "Thông tin nhập vào chứa ký tự không hợp lệ: \'";
+                ClearThongBao();
+                return;
+            }
+
             if (!KhachHang_BLL.checkEmailExist(textBox_Email.Text))
             {
                 label_ThongBao.Text = "Email không tồn tại";
@@ -59,6 +66,10 @@ namespace GUI
         private void button_XacNhanOTP_Click(object sender, EventArgs e)
         {
             textBox_MatKhauMoi.Enabled = true;
+            if (textBox_OTP.Text.Contains('\''))
+            {
+                label_ThongBao.Text = "Mã OTP nhập vào không hợp lệ, vui lòng kiểm tra OTP đã nhận qua email";
+            }
             //Đăng ký tài khoản
             if (OTP_BLL.checkOTP(textBox_Email.Text, textBox_OTP.Text))
             {

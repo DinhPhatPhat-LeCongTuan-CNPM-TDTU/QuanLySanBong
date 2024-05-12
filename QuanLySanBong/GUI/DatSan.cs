@@ -104,9 +104,22 @@ namespace GUI
 
         private void button_DatSan_Click(object sender, EventArgs e)
         {
+            if (!softwareInstance.isLoged)
+            {
+                label_ThongBao.Text = "Chưa đăng nhập, vui lòng vào mục Tài Khoản để đăng nhập";
+                ClearThongBao();
+                return;
+            }
+            if (softwareInstance.isAdmin)
+            {
+                label_ThongBao.Text = "Chỉ khách hàng mới đặt sân";
+                ClearThongBao();
+                return;
+            }
             if (comboBox_LoaiSan.SelectedIndex == -1 || comboBox_GioDa.SelectedIndex == -1 || comboBox_SoPhutDa.SelectedIndex == -1 || comboBox_ChonSan.SelectedIndex == -1)
             {
                 label_ThongBao.Text = "Bạn chưa nhập đủ thông tin đặt sân";
+                ClearThongBao();
                 return;
             }
             DateTime thoiGianDa = dateTimePicker_NgayDa.Value.Date;
@@ -119,6 +132,7 @@ namespace GUI
             if (thoiGianDa.CompareTo(DateTime.Now) < 0)
             {
                 label_ThongBao.Text = "Thời điểm đá đã qua, vui lòng xem lại";
+                ClearThongBao();
                 return;
             }
 
@@ -126,12 +140,20 @@ namespace GUI
             if (ChiTietPhieuDatSan_BLL.CheckTrungGioDa(thoiGianDa, thoiGianKetThuc, GetListSanBong()))
             {
                 label_ThongBao.Text = "Đã đăng ký trùng lịch, vui lòng chọn lịch trống";
+                ClearThongBao();
                 return;
             }
 
+
+            if (!SanBong_BLL.CheckSanBongTonTaiByList(GetListSanBong()))
+            {
+                label_ThongBao.Text = "Không thể đặt sân, vui lòng liên hệ quản lý Sân Bóng để biết chi tiết";
+                ClearThongBao();
+                return;
+            }
             string maPhieuDatSan = "";
             string maKhachHang = softwareInstance.khachHang.maKhachHang;
-            string maQuanLy = "";
+            string maQuanLy = "AD001";
             int loaiSan = Convert.ToInt32(comboBox_LoaiSan.SelectedItem);
             DateTime ngayDatSan = DateTime.Now;
             int tongTien = 0;
@@ -139,16 +161,23 @@ namespace GUI
             string maPhieuDatSan_ChiTietPhieuDatSan = PhieuDatSan_BLL.AddPhieuDatSan(phieuDatSan);
             ChiTietPhieuDatSan_BLL.AddChiTietPhieuDatSan(maPhieuDatSan_ChiTietPhieuDatSan, GetListSanBong());
             label_ThongBao.Text = "Đặt sân thành công, bạn có thể xem lại phiếu đặt sân trong mục Tài Khoản";
+            ClearThongBao();
         }
 
         private List<int> GetListSanBong()
         {
-            string chonSan = comboBox_ChonSan.SelectedItem.ToString();
+            string chonSan = comboBox_ChonSan.Text;
             string[] split = chonSan.Replace("Sân ", "").Split('-');
             List<int> list = new List<int>();
             list = Array.ConvertAll(split, int.Parse).ToList();
             return list;
         }
+        private async void ClearThongBao()
+        {
+            await Task.Delay(5000);
+            label_ThongBao.Text = "";
+        }
+
 
         private void button_KhungGioDaBiDat_Click(object sender, EventArgs e)
         {

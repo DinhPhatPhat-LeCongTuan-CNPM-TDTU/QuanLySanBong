@@ -43,7 +43,7 @@ namespace DAL
         public static DataTable XemLichSuDatSan(string maKhachHang)
         {
             string query = $@"Select maPhieuDatSan as N'Mã phiếu',
-                            maQuanLy as N'Mã Quản Lý xác nhận',
+                            maQuanLy as N'Mã Quản Lý thu tiền',
                             loaiSan as N'Loại sân',
                             ngayDatSan as N'Ngày đặt sân',
                             thoiGianDa as N'Thời gian đá',
@@ -54,6 +54,59 @@ namespace DAL
                             from PhieuDatSan
                             where maKhachHang = '{maKhachHang}'";
                             return Connection.selectQuery(query);
-        }                           
+        }
+
+
+        public static DataTable XemAllLichSuDatSanByNgayDa(DateTime ngayDa)
+        {
+            string query = $@"Select maPhieuDatSan as N'Mã phiếu',
+                            maQuanLy as N'Mã Quản Lý thu tiền',
+                            loaiSan as N'Loại sân',
+                            ngayDatSan as N'Ngày đặt sân',
+                            thoiGianDa as N'Thời gian đá',
+                            thoiGianKetThuc as N'Thời gian kết thúc',
+                            tongTien as N'Tổng tiền',
+                            tinhTrangXacNhan as N'Tình trạng xác nhận',
+                            tinhTrangThanhToan as N'Tình trạng thanh toán'
+                            from PhieuDatSan where CAST (thoiGianDa as DATE) = '{ngayDa.Date}'
+                            ";
+            return Connection.selectQuery(query);
+        }
+
+        public static void UpdateTongTienPhieuDatSanByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            string query = @$"
+                            WITH cte AS (
+                                SELECT ChiTietPhieuDatSan.maPhieuDatSan, 
+                                       ChiTietPhieuDatSan.giaSanTheoPhut * DATEDIFF(minute, PhieuDatSan.thoiGianDa, PhieuDatSan.thoiGianKetThuc) as tien
+                                FROM ChiTietPhieuDatSan
+                                INNER JOIN PhieuDatSan ON ChiTietPhieuDatSan.maPhieuDatSan = PhieuDatSan.maPhieuDatSan
+                                WHERE ChiTietPhieuDatSan.maPhieuDatSan = '{maPhieuDatSan}'
+                            )
+                            UPDATE PhieuDatSan 
+                            SET tongTien = (SELECT SUM(tien) FROM cte)
+                            WHERE maPhieuDatSan = '{maPhieuDatSan}'";
+                                Connection.actionQuery(query);
+        }
+
+        public static void UpdateTinhTrangPhieuDatSan(string maPhieuDatSan,string tinhTrangXacNhan, string tinhTrangThanhToan, string maQuanLyThuTien)
+        {
+            string query = $"Update PhieuDatSan Set tinhTrangXacNhan = N'{tinhTrangXacNhan}', tinhTrangThanhToan = N'{tinhTrangThanhToan}' where maPhieuDatSan = '{maPhieuDatSan}'";
+            Connection.actionQuery(query);
+            //
+            if (tinhTrangThanhToan.Equals("Đã thanh toán"))
+            {
+                string query2 = $"Update PhieuDatSan set maQuanLy ='{maQuanLyThuTien}' where maPhieuDatSan = '{maPhieuDatSan}'";
+                Connection.actionQuery(query2);
+                KhachHangAccess.UpdateSoLanDatSanThanhCong(maPhieuDatSan);
+            }
+        }
+
+        public static void DeletePhieuDatSanByMaPhieuDatSan(string maPhieuDatSan)
+        {
+            ChiTietPhieuDatSanAccess.DeleteChiTietPhieuDatSanByMaPhieuDatSan(maPhieuDatSan);
+            string query = $"Delete from PhieuDatSan where maPhieuDatSan = '{maPhieuDatSan}'";
+            Connection.actionQuery(query);
+        }
     }
 }

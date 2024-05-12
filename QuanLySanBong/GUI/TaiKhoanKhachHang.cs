@@ -30,13 +30,12 @@ namespace GUI
             textBox_Email.Text = softwareInstance.khachHang.email;
             textBox_DiaChi.Text = softwareInstance.khachHang.diaChi;
             dateTimePicker_NgaySinh.Value = softwareInstance.khachHang.ngaySinh;
-            textBox_DiaChi.Text = softwareInstance.khachHang.diaChi;
+            comboBox_GioiTinh.Text = softwareInstance.khachHang.gioiTinh;
             textBox_SoLanDatSanVaThanhToanThanhCong.Text = softwareInstance.khachHang.soLanDatSan.ToString();
         }
 
         private void checkBox_SuaThongTin_CheckedChanged(object sender, EventArgs e)
         {
-            comboBox_GioiTinh.SelectedIndex = 0;
             if (checkBox_SuaThongTin.Checked)
             {
                 button_LuuThongTin.Visible = true;
@@ -66,34 +65,46 @@ namespace GUI
             if (textBox_TenKhachHang.Text.Trim() == "")
             {
                 label_ThongBao.Text = "Tên khách hàng không bỏ trống";
+                ClearThongBao();
+                return;
+            }
+
+            if((textBox_DiaChi.Text + textBox_TenKhachHang.Text).Contains('\''))
+            {
+                label_ThongBao.Text = "Thông tin không được chứa ký tự đặc biệt: \'";
+                ClearThongBao();
                 return;
             }
 
             //Cập nhập CSDL bảng KhachHang
-            if (KhachHang_BLL.UpdateKhachHang(softwareInstance.khachHang.maKhachHang, textBox_TenKhachHang.Text, comboBox_GioiTinh.SelectedItem.ToString(), dateTimePicker_NgaySinh.Value, textBox_DiaChi.Text))
+            if (KhachHang_BLL.UpdateKhachHang(softwareInstance.khachHang.maKhachHang, textBox_TenKhachHang.Text, comboBox_GioiTinh.Text, dateTimePicker_NgaySinh.Value, textBox_DiaChi.Text))
             {
                 label_ThongBao.Text = "Cập nhật thông tin thành công";
                 softwareInstance.khachHang.tenKhachHang = textBox_TenKhachHang.Text;
-                softwareInstance.khachHang.gioiTinh = comboBox_GioiTinh.SelectedItem.ToString();
+                softwareInstance.khachHang.gioiTinh = comboBox_GioiTinh.Text;
                 softwareInstance.khachHang.ngaySinh = dateTimePicker_NgaySinh.Value;
                 softwareInstance.khachHang.diaChi = textBox_DiaChi.Text;
                 softwareInstance.changePanelShow(this);
                 checkBox_SuaThongTin.Checked = false;
+                ClearThongBao();
                 return;
             }
             else
             {
                 label_ThongBao.Text = "Lỗi cập nhật";
+                ClearThongBao();
             }
+        }
+
+        private async void ClearThongBao()
+        {
+            await Task.Delay(5000);
+            label_ThongBao.Text = "";
         }
 
         private void button_DangXuat_Click(object sender, EventArgs e)
         {
-            softwareInstance.isLoged = false;
-            softwareInstance.isAdmin = false;
-            softwareInstance.khachHang = null;
-            softwareInstance.quanLy = null;
-            softwareInstance.changePanelShow(new DangNhap(softwareInstance));
+            softwareInstance.DangXuat();
         }
     }
 }

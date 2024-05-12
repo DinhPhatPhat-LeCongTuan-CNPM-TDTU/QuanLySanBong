@@ -68,10 +68,11 @@
             // label_Top
             // 
             label_Top.AutoSize = true;
-            label_Top.Font = new Font("Calibri", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label_Top.Location = new Point(71, 9);
+            label_Top.Font = new Font("Calibri", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_Top.ForeColor = Color.Snow;
+            label_Top.Location = new Point(57, 5);
             label_Top.Name = "label_Top";
-            label_Top.Size = new Size(396, 28);
+            label_Top.Size = new Size(601, 41);
             label_Top.TabIndex = 1;
             label_Top.Text = "MY FOOTBALL PITCH - SÂN BÓNG TRÍ HẢI";
             // 

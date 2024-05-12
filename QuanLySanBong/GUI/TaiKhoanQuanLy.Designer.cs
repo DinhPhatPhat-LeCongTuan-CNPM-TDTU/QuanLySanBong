@@ -32,7 +32,7 @@
             groupBox_ThongTinQuanLy = new GroupBox();
             textBox_Email = new TextBox();
             textBox_SoDienThoai = new TextBox();
-            textBox_TenKhachHang = new TextBox();
+            textBox_TenQuanLy = new TextBox();
             label1 = new Label();
             label_SoDienThoai = new Label();
             label_TenQuanLy = new Label();
@@ -40,6 +40,7 @@
             button_QuanLyTaiKhoanHeThong = new Button();
             button_DieuChinhGiaSan = new Button();
             button_ThongKeKinhDoanh = new Button();
+            button_DangXuat = new Button();
             groupBox_ThongTinQuanLy.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             groupBox_ThongTinQuanLy.Controls.Add(textBox_Email);
             groupBox_ThongTinQuanLy.Controls.Add(textBox_SoDienThoai);
-            groupBox_ThongTinQuanLy.Controls.Add(textBox_TenKhachHang);
+            groupBox_ThongTinQuanLy.Controls.Add(textBox_TenQuanLy);
             groupBox_ThongTinQuanLy.Controls.Add(label1);
             groupBox_ThongTinQuanLy.Controls.Add(label_SoDienThoai);
             groupBox_ThongTinQuanLy.Controls.Add(label_TenQuanLy);
@@ -77,6 +78,7 @@
             textBox_Email.Name = "textBox_Email";
             textBox_Email.Size = new Size(269, 27);
             textBox_Email.TabIndex = 10;
+            textBox_Email.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox_SoDienThoai
             // 
@@ -85,14 +87,16 @@
             textBox_SoDienThoai.Name = "textBox_SoDienThoai";
             textBox_SoDienThoai.Size = new Size(269, 27);
             textBox_SoDienThoai.TabIndex = 9;
+            textBox_SoDienThoai.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox_TenKhachHang
+            // textBox_TenQuanLy
             // 
-            textBox_TenKhachHang.Enabled = false;
-            textBox_TenKhachHang.Location = new Point(117, 43);
-            textBox_TenKhachHang.Name = "textBox_TenKhachHang";
-            textBox_TenKhachHang.Size = new Size(269, 27);
-            textBox_TenKhachHang.TabIndex = 8;
+            textBox_TenQuanLy.Enabled = false;
+            textBox_TenQuanLy.Location = new Point(117, 43);
+            textBox_TenQuanLy.Name = "textBox_TenQuanLy";
+            textBox_TenQuanLy.Size = new Size(269, 27);
+            textBox_TenQuanLy.TabIndex = 8;
+            textBox_TenQuanLy.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -131,10 +135,12 @@
             button_QuanLyDatSan.TabIndex = 4;
             button_QuanLyDatSan.Text = "Quản lý đặt sân";
             button_QuanLyDatSan.UseVisualStyleBackColor = false;
+            button_QuanLyDatSan.Click += button_QuanLyDatSan_Click;
             // 
             // button_QuanLyTaiKhoanHeThong
             // 
             button_QuanLyTaiKhoanHeThong.BackColor = Color.FromArgb(60, 91, 111);
+            button_QuanLyTaiKhoanHeThong.Enabled = false;
             button_QuanLyTaiKhoanHeThong.ForeColor = Color.Snow;
             button_QuanLyTaiKhoanHeThong.Location = new Point(342, 403);
             button_QuanLyTaiKhoanHeThong.Name = "button_QuanLyTaiKhoanHeThong";
@@ -142,10 +148,12 @@
             button_QuanLyTaiKhoanHeThong.TabIndex = 5;
             button_QuanLyTaiKhoanHeThong.Text = "Quản lý tài khoản hệ thống";
             button_QuanLyTaiKhoanHeThong.UseVisualStyleBackColor = false;
+            button_QuanLyTaiKhoanHeThong.Click += button_QuanLyTaiKhoanHeThong_Click;
             // 
             // button_DieuChinhGiaSan
             // 
             button_DieuChinhGiaSan.BackColor = Color.FromArgb(60, 91, 111);
+            button_DieuChinhGiaSan.Enabled = false;
             button_DieuChinhGiaSan.ForeColor = Color.Snow;
             button_DieuChinhGiaSan.Location = new Point(342, 471);
             button_DieuChinhGiaSan.Name = "button_DieuChinhGiaSan";
@@ -153,10 +161,12 @@
             button_DieuChinhGiaSan.TabIndex = 6;
             button_DieuChinhGiaSan.Text = "Điều chỉnh giá sân";
             button_DieuChinhGiaSan.UseVisualStyleBackColor = false;
+            button_DieuChinhGiaSan.Click += button_DieuChinhGiaSan_Click;
             // 
             // button_ThongKeKinhDoanh
             // 
             button_ThongKeKinhDoanh.BackColor = Color.FromArgb(60, 91, 111);
+            button_ThongKeKinhDoanh.Enabled = false;
             button_ThongKeKinhDoanh.ForeColor = Color.Snow;
             button_ThongKeKinhDoanh.Location = new Point(342, 539);
             button_ThongKeKinhDoanh.Name = "button_ThongKeKinhDoanh";
@@ -165,6 +175,18 @@
             button_ThongKeKinhDoanh.Text = "Thống kê kinh doanh";
             button_ThongKeKinhDoanh.UseVisualStyleBackColor = false;
             // 
+            // button_DangXuat
+            // 
+            button_DangXuat.BackColor = Color.FromArgb(60, 91, 111);
+            button_DangXuat.ForeColor = Color.Snow;
+            button_DangXuat.Location = new Point(728, 12);
+            button_DangXuat.Name = "button_DangXuat";
+            button_DangXuat.Size = new Size(110, 32);
+            button_DangXuat.TabIndex = 8;
+            button_DangXuat.Text = "Đăng xuất";
+            button_DangXuat.UseVisualStyleBackColor = false;
+            button_DangXuat.Click += button_DangXuat_Click;
+            // 
             // TaiKhoanQuanLy
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -172,6 +194,7 @@
             BackColor = Color.Snow;
             ClientSize = new Size(850, 625);
             ControlBox = false;
+            Controls.Add(button_DangXuat);
             Controls.Add(button_ThongKeKinhDoanh);
             Controls.Add(button_DieuChinhGiaSan);
             Controls.Add(button_QuanLyTaiKhoanHeThong);
@@ -181,6 +204,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "TaiKhoanQuanLy";
             Text = "TaiKhoanQuanLy";
+            Load += TaiKhoanQuanLy_Load;
             groupBox_ThongTinQuanLy.ResumeLayout(false);
             groupBox_ThongTinQuanLy.PerformLayout();
             ResumeLayout(false);
@@ -193,7 +217,7 @@
         private GroupBox groupBox_ThongTinQuanLy;
         private TextBox textBox_Email;
         private TextBox textBox_SoDienThoai;
-        private TextBox textBox_TenKhachHang;
+        private TextBox textBox_TenQuanLy;
         private Label label1;
         private Label label_SoDienThoai;
         private Label label_TenQuanLy;
@@ -201,5 +225,6 @@
         private Button button_QuanLyTaiKhoanHeThong;
         private Button button_DieuChinhGiaSan;
         private Button button_ThongKeKinhDoanh;
+        private Button button_DangXuat;
     }
 }

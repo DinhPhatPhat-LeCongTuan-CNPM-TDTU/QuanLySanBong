@@ -142,10 +142,12 @@
             // 
             // dateTimePicker_NgaySinh
             // 
+            dateTimePicker_NgaySinh.CustomFormat = "dd/MM/yyyy";
             dateTimePicker_NgaySinh.Enabled = false;
+            dateTimePicker_NgaySinh.Format = DateTimePickerFormat.Custom;
             dateTimePicker_NgaySinh.Location = new Point(554, 84);
             dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
-            dateTimePicker_NgaySinh.Size = new Size(266, 27);
+            dateTimePicker_NgaySinh.Size = new Size(176, 27);
             dateTimePicker_NgaySinh.TabIndex = 15;
             // 
             // textBox_SoLanDatSanVaThanhToanThanhCong
@@ -256,17 +258,17 @@
             dataGridView_LichSuDatSan.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FloralWhite;
-            dataGridViewCellStyle1.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = Color.LightYellow;
             dataGridViewCellStyle1.SelectionForeColor = Color.Teal;
             dataGridView_LichSuDatSan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView_LichSuDatSan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_LichSuDatSan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridView_LichSuDatSan.BackgroundColor = Color.White;
             dataGridView_LichSuDatSan.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -275,7 +277,7 @@
             dataGridView_LichSuDatSan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = SystemColors.Desktop;
             dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.Desktop;

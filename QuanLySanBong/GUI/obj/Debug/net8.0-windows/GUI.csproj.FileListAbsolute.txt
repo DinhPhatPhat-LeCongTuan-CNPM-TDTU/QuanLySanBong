@@ -40,3 +40,6 @@ C:\Users\Admin\OneDrive\Desktop\Hoc tap\NAM 2\HK2\Software Engineering\QuanLySan
 C:\Users\Admin\OneDrive\Desktop\Hoc tap\NAM 2\HK2\Software Engineering\QuanLySanBong\QuanLySanBong\GUI\obj\Debug\net8.0-windows\GUI.DatSan.resources
 C:\Users\Admin\OneDrive\Desktop\Hoc tap\NAM 2\HK2\Software Engineering\QuanLySanBong\QuanLySanBong\GUI\obj\Debug\net8.0-windows\GUI.XemKhungGioBiDat.resources
 C:\Users\Admin\OneDrive\Desktop\Hoc tap\NAM 2\HK2\Software Engineering\QuanLySanBong\QuanLySanBong\GUI\obj\Debug\net8.0-windows\GUI.DoiMatKhau.resources
+C:\Users\Admin\OneDrive\Desktop\Hoc tap\NAM 2\HK2\Software Engineering\QuanLySanBong\QuanLySanBong\GUI\obj\Debug\net8.0-windows\GUI.QuanLyDatSan.resources
+C:\Users\Admin\OneDrive\Desktop\Hoc tap\NAM 2\HK2\Software Engineering\QuanLySanBong\QuanLySanBong\GUI\obj\Debug\net8.0-windows\GUI.QuanLyTaiKhoanHeThong.resources
+C:\Users\Admin\OneDrive\Desktop\Hoc tap\NAM 2\HK2\Software Engineering\QuanLySanBong\QuanLySanBong\GUI\obj\Debug\net8.0-windows\GUI.DieuChinhGiaSan.resources

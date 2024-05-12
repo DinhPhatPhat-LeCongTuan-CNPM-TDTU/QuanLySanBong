@@ -107,7 +107,8 @@
             // dateTimePicker_NgayXemLichSanBiDat
             // 
             dateTimePicker_NgayXemLichSanBiDat.CalendarTitleBackColor = SystemColors.ActiveBorder;
-            dateTimePicker_NgayXemLichSanBiDat.Format = DateTimePickerFormat.Short;
+            dateTimePicker_NgayXemLichSanBiDat.CustomFormat = "dd/MM/yyyy";
+            dateTimePicker_NgayXemLichSanBiDat.Format = DateTimePickerFormat.Custom;
             dateTimePicker_NgayXemLichSanBiDat.Location = new Point(178, 142);
             dateTimePicker_NgayXemLichSanBiDat.Name = "dateTimePicker_NgayXemLichSanBiDat";
             dateTimePicker_NgayXemLichSanBiDat.Size = new Size(145, 27);

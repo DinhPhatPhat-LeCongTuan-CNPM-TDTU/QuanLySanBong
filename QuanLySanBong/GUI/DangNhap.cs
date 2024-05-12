@@ -64,6 +64,7 @@ namespace GUI
                     //Đăng nhập với tư cách quản lý thành công
                     softwareInstance.isLoged = true;
                     softwareInstance.isAdmin = true;
+                    softwareInstance.quanLy = QuanLy_BLL.SelectOneQuanLyByEmail_SoDienThoai(soDienThoai_Email);
                     softwareInstance.changePanelShow(new TaiKhoanQuanLy(softwareInstance));
 
                 }

@@ -38,7 +38,7 @@ namespace GUI
             }
             if (isLoged == false)
             {
-                childFormNow = "TaiKhoan";
+                childFormNow = "DangNhap";
                 DangNhap dangnhap = new DangNhap(this);
                 changePanelShow(dangnhap);
             }
@@ -82,18 +82,21 @@ namespace GUI
             {
                 return;
             }
-            if (isLoged == false)
-            {
-                childFormNow = "TaiKhoan";
-                DangNhap dangnhap = new DangNhap(this);
-                changePanelShow(dangnhap);
-            }
             else
             {
                 childFormNow = "DatSan";
                 changePanelShow(new DatSan(this));
             }
-
         }
+
+        public void DangXuat()
+        {
+            isLoged = false;
+            isAdmin = false;
+            childFormNow = "";
+            khachHang = null;
+            quanLy = null;
+            changePanelShow(new DangNhap(this));
+        }   
     }
 }
