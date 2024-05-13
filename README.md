@@ -79,8 +79,13 @@
 - Mục tiêu tiếp theo: 
   + Hoàn thiện Form TaiKhoanQuanLy, gồm các chức năng : QuanLyDatSan, QuanLyTaiKhoanHeThong, DieuChinhGiaSan, ThongKeKinhDoanh (In ấn)
 
+- #################################################################
 - 01:1 13/5
 - Còn một chức năng in ấn thống kê khinh doanh là xong
 
+- #################################################################
 - 05:34 13/5
 - Hoàn thành.
+- #################################################################
+- 22:24 13/5
+- Chỉnh sửa sau test

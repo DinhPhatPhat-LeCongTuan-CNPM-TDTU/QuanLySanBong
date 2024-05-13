@@ -102,6 +102,7 @@ namespace GUI
         private void button_HDSDKhachhang_Click(object sender, EventArgs e)
         {
             changePanelShow(new HuongDanSuDung());
+            childFormNow = "HuongDanSuDung";
         }
     }
 }
