@@ -40,5 +40,15 @@ namespace GUI
             dataGridView_DanhSachSanBiDat.DataSource = dtsource;
             dataGridView_DanhSachSanBiDat.Show();
         }
+
+        private void button_XemGiaSan_Click(object sender, EventArgs e)
+        {
+            dataGridView_DanhSachSanBiDat.DataSource = SanBong_BLL.XemGiaSan();
+        }
+
+        private void button_XemSanBiDat_Click(object sender, EventArgs e)
+        {
+            LoadXemLichSanBiDat();
+        }
     }
 }

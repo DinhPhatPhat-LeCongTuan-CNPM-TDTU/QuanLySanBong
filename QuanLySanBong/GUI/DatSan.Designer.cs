@@ -128,7 +128,7 @@
             button_DatSan.Location = new Point(52, 302);
             button_DatSan.Name = "button_DatSan";
             button_DatSan.Size = new Size(369, 65);
-            button_DatSan.TabIndex = 9;
+            button_DatSan.TabIndex = 5;
             button_DatSan.Text = "Đặt sân";
             button_DatSan.UseVisualStyleBackColor = false;
             button_DatSan.Click += button_DatSan_Click;
@@ -141,7 +141,7 @@
             comboBox_GioDa.Location = new Point(164, 148);
             comboBox_GioDa.Name = "comboBox_GioDa";
             comboBox_GioDa.Size = new Size(125, 28);
-            comboBox_GioDa.TabIndex = 7;
+            comboBox_GioDa.TabIndex = 2;
             // 
             // label_GioDa
             // 
@@ -161,7 +161,7 @@
             comboBox_ChonSan.Location = new Point(164, 241);
             comboBox_ChonSan.Name = "comboBox_ChonSan";
             comboBox_ChonSan.Size = new Size(251, 28);
-            comboBox_ChonSan.TabIndex = 6;
+            comboBox_ChonSan.TabIndex = 4;
             comboBox_ChonSan.SelectedIndexChanged += comboBox_ChonSan_SelectedIndexChanged;
             // 
             // label_ChonSan
@@ -181,7 +181,7 @@
             button_KhungGioDaBiDat.Name = "button_KhungGioDaBiDat";
             button_KhungGioDaBiDat.Size = new Size(109, 163);
             button_KhungGioDaBiDat.TabIndex = 4;
-            button_KhungGioDaBiDat.Text = "Xem khung giờ đã bị đặt";
+            button_KhungGioDaBiDat.Text = "Xem giá sân, sân bị đặt";
             button_KhungGioDaBiDat.UseVisualStyleBackColor = true;
             button_KhungGioDaBiDat.Click += button_KhungGioDaBiDat_Click;
             // 
@@ -193,7 +193,7 @@
             comboBox_LoaiSan.Location = new Point(164, 54);
             comboBox_LoaiSan.Name = "comboBox_LoaiSan";
             comboBox_LoaiSan.Size = new Size(125, 28);
-            comboBox_LoaiSan.TabIndex = 1;
+            comboBox_LoaiSan.TabIndex = 0;
             comboBox_LoaiSan.SelectedIndexChanged += comboBox_LoaiSan_SelectedIndexChanged;
             // 
             // label_LoaiSan
@@ -215,7 +215,7 @@
             comboBox_SoPhutDa.Location = new Point(164, 192);
             comboBox_SoPhutDa.Name = "comboBox_SoPhutDa";
             comboBox_SoPhutDa.Size = new Size(125, 28);
-            comboBox_SoPhutDa.TabIndex = 2;
+            comboBox_SoPhutDa.TabIndex = 3;
             // 
             // label_DaTrong
             // 

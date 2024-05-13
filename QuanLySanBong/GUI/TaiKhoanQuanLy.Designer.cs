@@ -77,7 +77,7 @@
             textBox_Email.Location = new Point(117, 167);
             textBox_Email.Name = "textBox_Email";
             textBox_Email.Size = new Size(269, 27);
-            textBox_Email.TabIndex = 10;
+            textBox_Email.TabIndex = 2;
             textBox_Email.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox_SoDienThoai
@@ -86,7 +86,7 @@
             textBox_SoDienThoai.Location = new Point(117, 110);
             textBox_SoDienThoai.Name = "textBox_SoDienThoai";
             textBox_SoDienThoai.Size = new Size(269, 27);
-            textBox_SoDienThoai.TabIndex = 9;
+            textBox_SoDienThoai.TabIndex = 1;
             textBox_SoDienThoai.TextAlign = HorizontalAlignment.Center;
             // 
             // textBox_TenQuanLy
@@ -95,7 +95,7 @@
             textBox_TenQuanLy.Location = new Point(117, 43);
             textBox_TenQuanLy.Name = "textBox_TenQuanLy";
             textBox_TenQuanLy.Size = new Size(269, 27);
-            textBox_TenQuanLy.TabIndex = 8;
+            textBox_TenQuanLy.TabIndex = 0;
             textBox_TenQuanLy.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
@@ -132,7 +132,7 @@
             button_QuanLyDatSan.Location = new Point(342, 336);
             button_QuanLyDatSan.Name = "button_QuanLyDatSan";
             button_QuanLyDatSan.Size = new Size(153, 51);
-            button_QuanLyDatSan.TabIndex = 4;
+            button_QuanLyDatSan.TabIndex = 3;
             button_QuanLyDatSan.Text = "Quản lý đặt sân";
             button_QuanLyDatSan.UseVisualStyleBackColor = false;
             button_QuanLyDatSan.Click += button_QuanLyDatSan_Click;
@@ -145,7 +145,7 @@
             button_QuanLyTaiKhoanHeThong.Location = new Point(342, 403);
             button_QuanLyTaiKhoanHeThong.Name = "button_QuanLyTaiKhoanHeThong";
             button_QuanLyTaiKhoanHeThong.Size = new Size(153, 51);
-            button_QuanLyTaiKhoanHeThong.TabIndex = 5;
+            button_QuanLyTaiKhoanHeThong.TabIndex = 4;
             button_QuanLyTaiKhoanHeThong.Text = "Quản lý tài khoản hệ thống";
             button_QuanLyTaiKhoanHeThong.UseVisualStyleBackColor = false;
             button_QuanLyTaiKhoanHeThong.Click += button_QuanLyTaiKhoanHeThong_Click;
@@ -158,7 +158,7 @@
             button_DieuChinhGiaSan.Location = new Point(342, 471);
             button_DieuChinhGiaSan.Name = "button_DieuChinhGiaSan";
             button_DieuChinhGiaSan.Size = new Size(153, 51);
-            button_DieuChinhGiaSan.TabIndex = 6;
+            button_DieuChinhGiaSan.TabIndex = 5;
             button_DieuChinhGiaSan.Text = "Điều chỉnh giá sân";
             button_DieuChinhGiaSan.UseVisualStyleBackColor = false;
             button_DieuChinhGiaSan.Click += button_DieuChinhGiaSan_Click;
@@ -171,9 +171,10 @@
             button_ThongKeKinhDoanh.Location = new Point(342, 539);
             button_ThongKeKinhDoanh.Name = "button_ThongKeKinhDoanh";
             button_ThongKeKinhDoanh.Size = new Size(153, 51);
-            button_ThongKeKinhDoanh.TabIndex = 7;
+            button_ThongKeKinhDoanh.TabIndex = 6;
             button_ThongKeKinhDoanh.Text = "Thống kê kinh doanh";
             button_ThongKeKinhDoanh.UseVisualStyleBackColor = false;
+            button_ThongKeKinhDoanh.Click += button_ThongKeKinhDoanh_Click;
             // 
             // button_DangXuat
             // 
@@ -182,7 +183,7 @@
             button_DangXuat.Location = new Point(728, 12);
             button_DangXuat.Name = "button_DangXuat";
             button_DangXuat.Size = new Size(110, 32);
-            button_DangXuat.TabIndex = 8;
+            button_DangXuat.TabIndex = 7;
             button_DangXuat.Text = "Đăng xuất";
             button_DangXuat.UseVisualStyleBackColor = false;
             button_DangXuat.Click += button_DangXuat_Click;

@@ -16,6 +16,12 @@
     <Compile Update="DoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="HuongDanSuDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InAnThongKeKinhDoanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="QuanLyDatSan.cs">
       <SubType>Form</SubType>
     </Compile>

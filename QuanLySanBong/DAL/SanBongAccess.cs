@@ -43,5 +43,11 @@ namespace DAL
             string query = $"Update SanBong set giaSanTheoPhut = {giaSanTheoPhut} where maSanBong = '{maSanBong}'";
             Connection.actionQuery(query);
         }
+
+        public static DataTable XemGiaSan()
+        {
+            string query = "Select tenSanBong as N'Tên Sân', (giaSanTheoPhut * 30) as N'Giá Sân 30 phút', (giaSanTheoPhut * 60) as N'Giá sân 60 phút', (giaSanTheoPhut * 90) as N'Giá sân 90 phút' from SanBong";
+            return Connection.selectQuery(query);
+        }
     }
 }

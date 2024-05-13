@@ -81,3 +81,6 @@
 
 - 01:1 13/5
 - Còn một chức năng in ấn thống kê khinh doanh là xong
+
+- 05:34 13/5
+- Hoàn thành.

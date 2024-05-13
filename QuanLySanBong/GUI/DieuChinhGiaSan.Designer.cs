@@ -76,7 +76,7 @@
             dataGridView_DanhSachSanBong.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FloralWhite;
-            dataGridViewCellStyle1.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Calibri", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = Color.LightYellow;
             dataGridViewCellStyle1.SelectionForeColor = Color.Teal;
@@ -86,7 +86,7 @@
             dataGridView_DanhSachSanBong.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Calibri", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -95,7 +95,7 @@
             dataGridView_DanhSachSanBong.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Calibri", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = SystemColors.Desktop;
             dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.Desktop;
@@ -135,7 +135,7 @@
             button_CapNhatGiaSan.Location = new Point(396, 109);
             button_CapNhatGiaSan.Name = "button_CapNhatGiaSan";
             button_CapNhatGiaSan.Size = new Size(310, 30);
-            button_CapNhatGiaSan.TabIndex = 28;
+            button_CapNhatGiaSan.TabIndex = 3;
             button_CapNhatGiaSan.Text = "Cập nhật giá sân";
             button_CapNhatGiaSan.UseVisualStyleBackColor = false;
             button_CapNhatGiaSan.Click += button_CapNhatGiaSan_Click;
@@ -146,7 +146,7 @@
             textBox_GiaSanTrenPhut.Name = "textBox_GiaSanTrenPhut";
             textBox_GiaSanTrenPhut.PlaceholderText = "Giá sân/phút";
             textBox_GiaSanTrenPhut.Size = new Size(161, 27);
-            textBox_GiaSanTrenPhut.TabIndex = 20;
+            textBox_GiaSanTrenPhut.TabIndex = 1;
             // 
             // label_GiaSanTrenPhut
             // 
@@ -163,7 +163,7 @@
             textBox_Ma.Location = new Point(148, 47);
             textBox_Ma.Name = "textBox_Ma";
             textBox_Ma.Size = new Size(197, 27);
-            textBox_Ma.TabIndex = 18;
+            textBox_Ma.TabIndex = 0;
             // 
             // label_MaSan
             // 
@@ -181,7 +181,7 @@
             textBox_Ten.Location = new Point(148, 112);
             textBox_Ten.Name = "textBox_Ten";
             textBox_Ten.Size = new Size(197, 27);
-            textBox_Ten.TabIndex = 14;
+            textBox_Ten.TabIndex = 2;
             // 
             // label_TenSan
             // 

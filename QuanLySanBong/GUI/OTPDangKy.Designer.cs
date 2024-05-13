@@ -77,7 +77,7 @@
             button_XacNhanOTP.Location = new Point(19, 120);
             button_XacNhanOTP.Name = "button_XacNhanOTP";
             button_XacNhanOTP.Size = new Size(413, 43);
-            button_XacNhanOTP.TabIndex = 24;
+            button_XacNhanOTP.TabIndex = 1;
             button_XacNhanOTP.Text = "Xác nhận OTP";
             button_XacNhanOTP.UseVisualStyleBackColor = false;
             button_XacNhanOTP.Click += button_XacNhanOTP_Click;
@@ -87,7 +87,7 @@
             textBox_OTP.Location = new Point(301, 66);
             textBox_OTP.Name = "textBox_OTP";
             textBox_OTP.Size = new Size(131, 27);
-            textBox_OTP.TabIndex = 24;
+            textBox_OTP.TabIndex = 0;
             // 
             // label_NhapMaOTP
             // 

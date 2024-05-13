@@ -88,7 +88,7 @@
             button_TaiKhoanQuanLy.Location = new Point(23, 161);
             button_TaiKhoanQuanLy.Name = "button_TaiKhoanQuanLy";
             button_TaiKhoanQuanLy.Size = new Size(167, 51);
-            button_TaiKhoanQuanLy.TabIndex = 17;
+            button_TaiKhoanQuanLy.TabIndex = 1;
             button_TaiKhoanQuanLy.Text = "Tài khoản quản lý";
             button_TaiKhoanQuanLy.UseVisualStyleBackColor = false;
             button_TaiKhoanQuanLy.Click += button_TaiKhoanQuanLy_Click;
@@ -100,7 +100,7 @@
             button_TaiKhoanKhachHang.Location = new Point(23, 82);
             button_TaiKhoanKhachHang.Name = "button_TaiKhoanKhachHang";
             button_TaiKhoanKhachHang.Size = new Size(167, 55);
-            button_TaiKhoanKhachHang.TabIndex = 18;
+            button_TaiKhoanKhachHang.TabIndex = 0;
             button_TaiKhoanKhachHang.Text = "Tài khoản khách hàng";
             button_TaiKhoanKhachHang.UseVisualStyleBackColor = false;
             button_TaiKhoanKhachHang.Click += button_TaiKhoanKhachHang_Click;
@@ -151,7 +151,7 @@
             comboBox_GioiTinh.Location = new Point(183, 159);
             comboBox_GioiTinh.Name = "comboBox_GioiTinh";
             comboBox_GioiTinh.Size = new Size(197, 28);
-            comboBox_GioiTinh.TabIndex = 30;
+            comboBox_GioiTinh.TabIndex = 8;
             // 
             // dateTimePicker_NgaySinh
             // 
@@ -160,7 +160,7 @@
             dateTimePicker_NgaySinh.Location = new Point(533, 161);
             dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
             dateTimePicker_NgaySinh.Size = new Size(192, 27);
-            dateTimePicker_NgaySinh.TabIndex = 29;
+            dateTimePicker_NgaySinh.TabIndex = 13;
             // 
             // textBox_SoLanDatSan
             // 
@@ -168,7 +168,7 @@
             textBox_SoLanDatSan.Location = new Point(533, 204);
             textBox_SoLanDatSan.Name = "textBox_SoLanDatSan";
             textBox_SoLanDatSan.Size = new Size(192, 27);
-            textBox_SoLanDatSan.TabIndex = 28;
+            textBox_SoLanDatSan.TabIndex = 14;
             // 
             // label_SoLanDatSan
             // 
@@ -187,7 +187,7 @@
             comboBox_ToanQuyen.Location = new Point(533, 40);
             comboBox_ToanQuyen.Name = "comboBox_ToanQuyen";
             comboBox_ToanQuyen.Size = new Size(192, 28);
-            comboBox_ToanQuyen.TabIndex = 22;
+            comboBox_ToanQuyen.TabIndex = 10;
             // 
             // label_ToanQuyen
             // 
@@ -203,7 +203,7 @@
             textBox_DiaChi.Location = new Point(183, 203);
             textBox_DiaChi.Name = "textBox_DiaChi";
             textBox_DiaChi.Size = new Size(197, 27);
-            textBox_DiaChi.TabIndex = 26;
+            textBox_DiaChi.TabIndex = 9;
             // 
             // label_DiaChi
             // 
@@ -228,7 +228,7 @@
             textBox_MatKhau.Location = new Point(533, 80);
             textBox_MatKhau.Name = "textBox_MatKhau";
             textBox_MatKhau.Size = new Size(192, 27);
-            textBox_MatKhau.TabIndex = 20;
+            textBox_MatKhau.TabIndex = 11;
             // 
             // label_MatKhau
             // 
@@ -245,7 +245,7 @@
             textBox_Ma.Location = new Point(183, 40);
             textBox_Ma.Name = "textBox_Ma";
             textBox_Ma.Size = new Size(197, 27);
-            textBox_Ma.TabIndex = 18;
+            textBox_Ma.TabIndex = 5;
             // 
             // label_Ma
             // 
@@ -261,21 +261,21 @@
             textBox_Email.Location = new Point(533, 119);
             textBox_Email.Name = "textBox_Email";
             textBox_Email.Size = new Size(192, 27);
-            textBox_Email.TabIndex = 16;
+            textBox_Email.TabIndex = 12;
             // 
             // textBox_SoDienThoai
             // 
             textBox_SoDienThoai.Location = new Point(183, 118);
             textBox_SoDienThoai.Name = "textBox_SoDienThoai";
             textBox_SoDienThoai.Size = new Size(197, 27);
-            textBox_SoDienThoai.TabIndex = 15;
+            textBox_SoDienThoai.TabIndex = 7;
             // 
             // textBox_Ten
             // 
             textBox_Ten.Location = new Point(183, 79);
             textBox_Ten.Name = "textBox_Ten";
             textBox_Ten.Size = new Size(197, 27);
-            textBox_Ten.TabIndex = 14;
+            textBox_Ten.TabIndex = 6;
             // 
             // label1
             // 
@@ -362,7 +362,7 @@
             textBox_TenMuonTim.Name = "textBox_TenMuonTim";
             textBox_TenMuonTim.PlaceholderText = "Nhập tên muốn tìm";
             textBox_TenMuonTim.Size = new Size(167, 27);
-            textBox_TenMuonTim.TabIndex = 21;
+            textBox_TenMuonTim.TabIndex = 2;
             textBox_TenMuonTim.TextAlign = HorizontalAlignment.Center;
             // 
             // button_TimTheoTen
@@ -372,7 +372,7 @@
             button_TimTheoTen.Location = new Point(50, 268);
             button_TimTheoTen.Name = "button_TimTheoTen";
             button_TimTheoTen.Size = new Size(115, 29);
-            button_TimTheoTen.TabIndex = 22;
+            button_TimTheoTen.TabIndex = 3;
             button_TimTheoTen.Text = "Tìm theo tên";
             button_TimTheoTen.UseVisualStyleBackColor = false;
             button_TimTheoTen.Click += button_TimTheoTen_Click;
@@ -384,7 +384,7 @@
             button_HienTatCa.Location = new Point(50, 303);
             button_HienTatCa.Name = "button_HienTatCa";
             button_HienTatCa.Size = new Size(115, 29);
-            button_HienTatCa.TabIndex = 23;
+            button_HienTatCa.TabIndex = 4;
             button_HienTatCa.Text = "Hiện tất cả";
             button_HienTatCa.UseVisualStyleBackColor = false;
             button_HienTatCa.Click += button_HienTatCa_Click;
@@ -396,7 +396,7 @@
             button_Xoa.Location = new Point(292, 365);
             button_Xoa.Name = "button_Xoa";
             button_Xoa.Size = new Size(146, 30);
-            button_Xoa.TabIndex = 27;
+            button_Xoa.TabIndex = 15;
             button_Xoa.Text = "Xóa tài khoản";
             button_Xoa.UseVisualStyleBackColor = false;
             button_Xoa.Visible = false;
@@ -409,7 +409,7 @@
             button_ThemQuanLy.Location = new Point(661, 365);
             button_ThemQuanLy.Name = "button_ThemQuanLy";
             button_ThemQuanLy.Size = new Size(151, 30);
-            button_ThemQuanLy.TabIndex = 28;
+            button_ThemQuanLy.TabIndex = 17;
             button_ThemQuanLy.Text = "Thêm quản lý";
             button_ThemQuanLy.UseVisualStyleBackColor = false;
             button_ThemQuanLy.Visible = false;
@@ -422,7 +422,7 @@
             button_SuaTaiKhoan.Location = new Point(474, 365);
             button_SuaTaiKhoan.Name = "button_SuaTaiKhoan";
             button_SuaTaiKhoan.Size = new Size(149, 30);
-            button_SuaTaiKhoan.TabIndex = 29;
+            button_SuaTaiKhoan.TabIndex = 16;
             button_SuaTaiKhoan.Text = "Sửa tài khoản";
             button_SuaTaiKhoan.UseVisualStyleBackColor = false;
             button_SuaTaiKhoan.Visible = false;
@@ -435,7 +435,7 @@
             button_LuuThem.Location = new Point(847, 365);
             button_LuuThem.Name = "button_LuuThem";
             button_LuuThem.Size = new Size(151, 30);
-            button_LuuThem.TabIndex = 30;
+            button_LuuThem.TabIndex = 18;
             button_LuuThem.Text = "Lưu thêm";
             button_LuuThem.UseVisualStyleBackColor = false;
             button_LuuThem.Visible = false;

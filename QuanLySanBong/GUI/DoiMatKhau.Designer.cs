@@ -83,7 +83,7 @@
             textBox_MatKhauMoi.Name = "textBox_MatKhauMoi";
             textBox_MatKhauMoi.PlaceholderText = "Mật khẩu mới";
             textBox_MatKhauMoi.Size = new Size(333, 27);
-            textBox_MatKhauMoi.TabIndex = 2;
+            textBox_MatKhauMoi.TabIndex = 1;
             // 
             // label_NhapMatKhau
             // 
@@ -100,7 +100,7 @@
             button_GuiOTP.Location = new Point(145, 206);
             button_GuiOTP.Name = "button_GuiOTP";
             button_GuiOTP.Size = new Size(153, 43);
-            button_GuiOTP.TabIndex = 3;
+            button_GuiOTP.TabIndex = 2;
             button_GuiOTP.Text = "Gửi OTP đến email";
             button_GuiOTP.UseVisualStyleBackColor = false;
             button_GuiOTP.Click += button_GuiOTP_Click;
@@ -111,7 +111,7 @@
             textBox_Email.Name = "textBox_Email";
             textBox_Email.PlaceholderText = "Email";
             textBox_Email.Size = new Size(333, 27);
-            textBox_Email.TabIndex = 1;
+            textBox_Email.TabIndex = 0;
             // 
             // label_NhapEmail
             // 
@@ -137,7 +137,7 @@
             button_XacNhanOTP.Location = new Point(19, 358);
             button_XacNhanOTP.Name = "button_XacNhanOTP";
             button_XacNhanOTP.Size = new Size(413, 43);
-            button_XacNhanOTP.TabIndex = 5;
+            button_XacNhanOTP.TabIndex = 4;
             button_XacNhanOTP.Text = "Xác nhận OTP";
             button_XacNhanOTP.UseVisualStyleBackColor = false;
             button_XacNhanOTP.Click += button_XacNhanOTP_Click;
@@ -147,7 +147,7 @@
             textBox_OTP.Location = new Point(208, 309);
             textBox_OTP.Name = "textBox_OTP";
             textBox_OTP.Size = new Size(169, 27);
-            textBox_OTP.TabIndex = 4;
+            textBox_OTP.TabIndex = 3;
             // 
             // label_NhapMaOTP
             // 

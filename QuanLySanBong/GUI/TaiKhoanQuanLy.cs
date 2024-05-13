@@ -60,5 +60,11 @@ namespace GUI
             DieuChinhGiaSan dieuChinhGiaSan = new DieuChinhGiaSan();
             dieuChinhGiaSan.Show();
         }
+
+        private void button_ThongKeKinhDoanh_Click(object sender, EventArgs e)
+        {
+            InAnThongKeKinhDoanh inAnThongKeKinhDoanh = new InAnThongKeKinhDoanh();
+            inAnThongKeKinhDoanh.Show();
+        }
     }
 }

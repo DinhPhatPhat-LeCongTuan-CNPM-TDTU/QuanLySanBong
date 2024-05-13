@@ -108,5 +108,13 @@ namespace DAL
             string query = $"Delete from PhieuDatSan where maPhieuDatSan = '{maPhieuDatSan}'";
             Connection.actionQuery(query);
         }
+
+        public static DataTable ThongKeKinhDoanh(DateTime tu, DateTime den)
+        {
+            tu = tu.Date;
+            den = den.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
+            string query = @$"Select maPhieuDatSan as N'Mã phiếu đặt sân',loaiSan as N'Loại sân', thoiGianDa N'Thời gian đá', thoiGianKetThuc as N'Thời gian kết thúc', tongTien as N'Giá' from PhieuDatSan where tinhTrangThanhToan = N'Đã thanh toán' and thoiGianDa between '{tu}' and '{den}'";
+            return Connection.selectQuery(query);
+        }
     }
 }

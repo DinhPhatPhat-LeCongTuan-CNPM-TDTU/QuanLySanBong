@@ -53,5 +53,10 @@ namespace BLL
         {
             PhieuDatSanAccess.DeletePhieuDatSanByMaPhieuDatSan(maPhieuDatSan);
         }
+
+        public static DataTable ThongKeKinhDoanh(DateTime tu, DateTime den)
+        {
+            return PhieuDatSanAccess.ThongKeKinhDoanh(tu, den);
+        }
     }
 }

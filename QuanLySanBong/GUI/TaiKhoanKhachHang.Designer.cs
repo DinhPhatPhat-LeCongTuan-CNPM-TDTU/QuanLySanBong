@@ -113,7 +113,7 @@
             button_LuuThongTin.Location = new Point(680, 163);
             button_LuuThongTin.Name = "button_LuuThongTin";
             button_LuuThongTin.Size = new Size(120, 29);
-            button_LuuThongTin.TabIndex = 18;
+            button_LuuThongTin.TabIndex = 8;
             button_LuuThongTin.Text = "Lưu thông tin";
             button_LuuThongTin.UseVisualStyleBackColor = false;
             button_LuuThongTin.Visible = false;
@@ -127,7 +127,7 @@
             comboBox_GioiTinh.Location = new Point(554, 42);
             comboBox_GioiTinh.Name = "comboBox_GioiTinh";
             comboBox_GioiTinh.Size = new Size(120, 28);
-            comboBox_GioiTinh.TabIndex = 17;
+            comboBox_GioiTinh.TabIndex = 4;
             // 
             // checkBox_SuaThongTin
             // 
@@ -135,7 +135,7 @@
             checkBox_SuaThongTin.Location = new Point(554, 168);
             checkBox_SuaThongTin.Name = "checkBox_SuaThongTin";
             checkBox_SuaThongTin.Size = new Size(120, 24);
-            checkBox_SuaThongTin.TabIndex = 16;
+            checkBox_SuaThongTin.TabIndex = 7;
             checkBox_SuaThongTin.Text = "Sửa thông tin";
             checkBox_SuaThongTin.UseVisualStyleBackColor = true;
             checkBox_SuaThongTin.CheckedChanged += checkBox_SuaThongTin_CheckedChanged;
@@ -148,7 +148,7 @@
             dateTimePicker_NgaySinh.Location = new Point(554, 84);
             dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
             dateTimePicker_NgaySinh.Size = new Size(176, 27);
-            dateTimePicker_NgaySinh.TabIndex = 15;
+            dateTimePicker_NgaySinh.TabIndex = 5;
             // 
             // textBox_SoLanDatSanVaThanhToanThanhCong
             // 
@@ -156,7 +156,7 @@
             textBox_SoLanDatSanVaThanhToanThanhCong.Location = new Point(182, 168);
             textBox_SoLanDatSanVaThanhToanThanhCong.Name = "textBox_SoLanDatSanVaThanhToanThanhCong";
             textBox_SoLanDatSanVaThanhToanThanhCong.Size = new Size(85, 27);
-            textBox_SoLanDatSanVaThanhToanThanhCong.TabIndex = 14;
+            textBox_SoLanDatSanVaThanhToanThanhCong.TabIndex = 3;
             // 
             // textBox_DiaChi
             // 
@@ -164,7 +164,7 @@
             textBox_DiaChi.Location = new Point(554, 123);
             textBox_DiaChi.Name = "textBox_DiaChi";
             textBox_DiaChi.Size = new Size(266, 27);
-            textBox_DiaChi.TabIndex = 13;
+            textBox_DiaChi.TabIndex = 6;
             // 
             // textBox_Email
             // 
@@ -172,7 +172,7 @@
             textBox_Email.Location = new Point(182, 123);
             textBox_Email.Name = "textBox_Email";
             textBox_Email.Size = new Size(269, 27);
-            textBox_Email.TabIndex = 10;
+            textBox_Email.TabIndex = 2;
             // 
             // textBox_SoDienThoai
             // 
@@ -180,7 +180,7 @@
             textBox_SoDienThoai.Location = new Point(182, 82);
             textBox_SoDienThoai.Name = "textBox_SoDienThoai";
             textBox_SoDienThoai.Size = new Size(269, 27);
-            textBox_SoDienThoai.TabIndex = 9;
+            textBox_SoDienThoai.TabIndex = 1;
             // 
             // textBox_TenKhachHang
             // 
@@ -188,7 +188,7 @@
             textBox_TenKhachHang.Location = new Point(182, 43);
             textBox_TenKhachHang.Name = "textBox_TenKhachHang";
             textBox_TenKhachHang.Size = new Size(269, 27);
-            textBox_TenKhachHang.TabIndex = 8;
+            textBox_TenKhachHang.TabIndex = 0;
             // 
             // label_SoLanDatSanVaThanhToanThanhCong
             // 
@@ -310,7 +310,7 @@
             button_DangXuat.Location = new Point(788, 31);
             button_DangXuat.Name = "button_DangXuat";
             button_DangXuat.Size = new Size(50, 47);
-            button_DangXuat.TabIndex = 12;
+            button_DangXuat.TabIndex = 9;
             button_DangXuat.UseVisualStyleBackColor = false;
             button_DangXuat.Click += button_DangXuat_Click;
             // 

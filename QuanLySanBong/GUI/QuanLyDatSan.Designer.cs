@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label_QuanLyDatSan = new Label();
             dateTimePicker_ChonNgayDaFill = new DateTimePicker();
             label_ChonNgayDa = new Label();
@@ -93,7 +93,7 @@
             dateTimePicker_ChonNgayDaFill.Location = new Point(180, 35);
             dateTimePicker_ChonNgayDaFill.Name = "dateTimePicker_ChonNgayDaFill";
             dateTimePicker_ChonNgayDaFill.Size = new Size(164, 27);
-            dateTimePicker_ChonNgayDaFill.TabIndex = 4;
+            dateTimePicker_ChonNgayDaFill.TabIndex = 0;
             dateTimePicker_ChonNgayDaFill.ValueChanged += dateTimePicker_ChonNgayDa_ValueChanged;
             // 
             // label_ChonNgayDa
@@ -119,33 +119,33 @@
             // 
             dataGridView_SanDuocDat.AllowUserToAddRows = false;
             dataGridView_SanDuocDat.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FloralWhite;
-            dataGridViewCellStyle1.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightYellow;
-            dataGridViewCellStyle1.SelectionForeColor = Color.Teal;
-            dataGridView_SanDuocDat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FloralWhite;
+            dataGridViewCellStyle4.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.LightYellow;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Teal;
+            dataGridView_SanDuocDat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView_SanDuocDat.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_SanDuocDat.BackgroundColor = Color.White;
             dataGridView_SanDuocDat.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView_SanDuocDat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridView_SanDuocDat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView_SanDuocDat.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dataGridView_SanDuocDat.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.Font = new Font("Calibri", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridView_SanDuocDat.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridView_SanDuocDat.Dock = DockStyle.Fill;
             dataGridView_SanDuocDat.GridColor = Color.White;
             dataGridView_SanDuocDat.Location = new Point(3, 23);
@@ -164,7 +164,7 @@
             comboBox_TinhTrangXacNhanFill.Location = new Point(180, 87);
             comboBox_TinhTrangXacNhanFill.Name = "comboBox_TinhTrangXacNhanFill";
             comboBox_TinhTrangXacNhanFill.Size = new Size(164, 28);
-            comboBox_TinhTrangXacNhanFill.TabIndex = 7;
+            comboBox_TinhTrangXacNhanFill.TabIndex = 1;
             comboBox_TinhTrangXacNhanFill.SelectedIndexChanged += comboBox_TinhTrangXacNhanFill_SelectedIndexChanged;
             // 
             // label_TinhTrangXacNhanFill
@@ -208,7 +208,7 @@
             comboBox_TinhTrangThanhToanFill.Location = new Point(179, 147);
             comboBox_TinhTrangThanhToanFill.Name = "comboBox_TinhTrangThanhToanFill";
             comboBox_TinhTrangThanhToanFill.Size = new Size(165, 28);
-            comboBox_TinhTrangThanhToanFill.TabIndex = 11;
+            comboBox_TinhTrangThanhToanFill.TabIndex = 2;
             comboBox_TinhTrangThanhToanFill.SelectedIndexChanged += comboBox_TinhTrangThanhToanFill_SelectedIndexChanged;
             // 
             // groupBox_ThongTinDatSan
@@ -250,7 +250,7 @@
             textBox_TenThuNgan.Location = new Point(454, 70);
             textBox_TenThuNgan.Name = "textBox_TenThuNgan";
             textBox_TenThuNgan.Size = new Size(181, 27);
-            textBox_TenThuNgan.TabIndex = 24;
+            textBox_TenThuNgan.TabIndex = 10;
             // 
             // label_ThuNgan
             // 
@@ -267,7 +267,7 @@
             textBox_SoDienThoai.Location = new Point(135, 110);
             textBox_SoDienThoai.Name = "textBox_SoDienThoai";
             textBox_SoDienThoai.Size = new Size(164, 27);
-            textBox_SoDienThoai.TabIndex = 22;
+            textBox_SoDienThoai.TabIndex = 5;
             // 
             // label_SoDienThoai
             // 
@@ -284,7 +284,7 @@
             textBox_NgayDatSan.Location = new Point(454, 110);
             textBox_NgayDatSan.Name = "textBox_NgayDatSan";
             textBox_NgayDatSan.Size = new Size(181, 27);
-            textBox_NgayDatSan.TabIndex = 20;
+            textBox_NgayDatSan.TabIndex = 11;
             // 
             // label2
             // 
@@ -312,7 +312,7 @@
             comboBox_TinhTrangThanhToan.Location = new Point(454, 232);
             comboBox_TinhTrangThanhToan.Name = "comboBox_TinhTrangThanhToan";
             comboBox_TinhTrangThanhToan.Size = new Size(181, 28);
-            comboBox_TinhTrangThanhToan.TabIndex = 17;
+            comboBox_TinhTrangThanhToan.TabIndex = 14;
             // 
             // textBox_ThoiGianDa
             // 
@@ -320,7 +320,7 @@
             textBox_ThoiGianDa.Location = new Point(135, 152);
             textBox_ThoiGianDa.Name = "textBox_ThoiGianDa";
             textBox_ThoiGianDa.Size = new Size(164, 27);
-            textBox_ThoiGianDa.TabIndex = 13;
+            textBox_ThoiGianDa.TabIndex = 6;
             // 
             // label_ThoiGianDa
             // 
@@ -339,7 +339,7 @@
             comboBox_TinhTrangXacNhan.Location = new Point(135, 231);
             comboBox_TinhTrangXacNhan.Name = "comboBox_TinhTrangXacNhan";
             comboBox_TinhTrangXacNhan.Size = new Size(164, 28);
-            comboBox_TinhTrangXacNhan.TabIndex = 16;
+            comboBox_TinhTrangXacNhan.TabIndex = 8;
             // 
             // textBox_TongTien
             // 
@@ -347,7 +347,7 @@
             textBox_TongTien.Location = new Point(135, 193);
             textBox_TongTien.Name = "textBox_TongTien";
             textBox_TongTien.Size = new Size(164, 27);
-            textBox_TongTien.TabIndex = 9;
+            textBox_TongTien.TabIndex = 7;
             // 
             // label_Gia
             // 
@@ -364,7 +364,7 @@
             textBox_ThoiGianKetThuc.Location = new Point(454, 152);
             textBox_ThoiGianKetThuc.Name = "textBox_ThoiGianKetThuc";
             textBox_ThoiGianKetThuc.Size = new Size(181, 27);
-            textBox_ThoiGianKetThuc.TabIndex = 15;
+            textBox_ThoiGianKetThuc.TabIndex = 12;
             // 
             // label_ThoiGianKetThuc
             // 
@@ -390,7 +390,7 @@
             textBox_TenSan.Location = new Point(454, 196);
             textBox_TenSan.Name = "textBox_TenSan";
             textBox_TenSan.Size = new Size(181, 27);
-            textBox_TenSan.TabIndex = 7;
+            textBox_TenSan.TabIndex = 13;
             // 
             // label_TenSan
             // 
@@ -407,7 +407,7 @@
             textBox_TenKhachHang.Location = new Point(135, 70);
             textBox_TenKhachHang.Name = "textBox_TenKhachHang";
             textBox_TenKhachHang.Size = new Size(164, 27);
-            textBox_TenKhachHang.TabIndex = 5;
+            textBox_TenKhachHang.TabIndex = 4;
             // 
             // label_TenKhachHang
             // 
@@ -424,7 +424,7 @@
             textBox_LoaiSan.Location = new Point(454, 26);
             textBox_LoaiSan.Name = "textBox_LoaiSan";
             textBox_LoaiSan.Size = new Size(181, 27);
-            textBox_LoaiSan.TabIndex = 3;
+            textBox_LoaiSan.TabIndex = 9;
             // 
             // label1
             // 
@@ -450,7 +450,7 @@
             textBox_MaPhieuDatSan.Location = new Point(135, 28);
             textBox_MaPhieuDatSan.Name = "textBox_MaPhieuDatSan";
             textBox_MaPhieuDatSan.Size = new Size(164, 27);
-            textBox_MaPhieuDatSan.TabIndex = 0;
+            textBox_MaPhieuDatSan.TabIndex = 3;
             // 
             // button_LuuThongTinDatSan
             // 
@@ -459,7 +459,7 @@
             button_LuuThongTinDatSan.Location = new Point(756, 34);
             button_LuuThongTinDatSan.Name = "button_LuuThongTinDatSan";
             button_LuuThongTinDatSan.Size = new Size(167, 35);
-            button_LuuThongTinDatSan.TabIndex = 16;
+            button_LuuThongTinDatSan.TabIndex = 15;
             button_LuuThongTinDatSan.Text = "Lưu thông tin đặt sân";
             button_LuuThongTinDatSan.UseVisualStyleBackColor = false;
             button_LuuThongTinDatSan.Click += button_LuuThongTinDatSan_Click;
@@ -471,7 +471,7 @@
             button_XoaDatSan.Location = new Point(957, 34);
             button_XoaDatSan.Name = "button_XoaDatSan";
             button_XoaDatSan.Size = new Size(99, 35);
-            button_XoaDatSan.TabIndex = 17;
+            button_XoaDatSan.TabIndex = 16;
             button_XoaDatSan.Text = "Xóa đặt sân";
             button_XoaDatSan.UseVisualStyleBackColor = false;
             button_XoaDatSan.Click += button_XoaDatSan_Click;

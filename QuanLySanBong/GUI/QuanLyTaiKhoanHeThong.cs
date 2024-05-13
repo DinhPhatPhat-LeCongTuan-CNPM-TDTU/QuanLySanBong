@@ -267,7 +267,10 @@ namespace GUI
 
         private void button_LuuThem_Click(object sender, EventArgs e)
         {
-            CheckThongTinQuanLy();
+            if (!CheckThongTinQuanLy())
+            {
+                return;
+            }
             QuanLy_BLL.InsertQuanLy(textBox_Ten.Text, textBox_SoDienThoai.Text, textBox_Email.Text, textBox_MatKhau.Text, false);
             MessageBox.Show($"Quản lý mới: {textBox_Ten.Text} vừa được thêm vào", "Thêm thành công");
             button_TaiKhoanQuanLy_Click(sender, e);
@@ -313,7 +316,7 @@ namespace GUI
             }
         }
 
-        private void CheckThongTinQuanLy()
+        private bool CheckThongTinQuanLy()
         {
             if (
                 string.IsNullOrWhiteSpace(textBox_Ten.Text) ||
@@ -322,7 +325,7 @@ namespace GUI
                 string.IsNullOrWhiteSpace(textBox_MatKhau.Text))
             {
                 MessageBox.Show("Không được để trống thông tin quản lý");
-                return;
+                return false;
             }
 
             string allText = textBox_Ten.Text + textBox_SoDienThoai.Text + textBox_Email.Text + textBox_MatKhau.Text;
@@ -330,36 +333,37 @@ namespace GUI
             if (allText.Contains("\'"))
             {
                 MessageBox.Show("Không được chứa ký tự đặt biệt trong thông tin: \'");
-                return;
+                return false;
             }
 
             if (QuanLy_BLL.SelectOneQuanLyByEmail_SoDienThoai(textBox_Email.Text) != null)
             {
                 MessageBox.Show("Email đã tồn tại");
-                return;
+                return false;
             }
             if (!Regex.IsMatch(textBox_SoDienThoai.Text, @"^\d{10}$"))
             {
                 MessageBox.Show("Số điện thoại không hợp lệ");
-                return;
+                return false;
             }
             if (QuanLy_BLL.SelectOneQuanLyByEmail_SoDienThoai(textBox_SoDienThoai.Text) != null)
             {
                 MessageBox.Show("Số điện thoại đã tồn tại");
-                return;
+                return false;
             }
 
             if (textBox_MatKhau.Text.Length < 6)
             {
                 MessageBox.Show("Mật khẩu phải có ít nhất 6 ký tự");
-                return;
+                return false;
             }
 
             if (!CheckEmailValid(textBox_Email.Text))
             {
                 MessageBox.Show("Email không hợp lệ");
-                return;
+                return false;
             }
+            return true;
         }
     }
 }

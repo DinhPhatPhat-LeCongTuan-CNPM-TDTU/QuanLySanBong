@@ -119,7 +119,9 @@ namespace GUI
             if (textBox_MaPhieuDatSan.Text != "")
             {
                 PhieuDatSan_BLL.UpdateTinhTrangPhieuDatSan(textBox_MaPhieuDatSan.Text, comboBox_TinhTrangXacNhan.Text, comboBox_TinhTrangThanhToan.Text, maQuanLyThuTien);
+                FillDatagridview();
             }
+
         }
 
         private void button_XoaDatSan_Click(object sender, EventArgs e)

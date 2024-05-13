@@ -43,6 +43,9 @@
             button_TaiKhoan = new Button();
             pictureBox_TaiKhoan = new PictureBox();
             groupBox_NavBar = new GroupBox();
+            panel_HDSDKhachHang = new Panel();
+            button_HDSDKhachhang = new Button();
+            pictureBox1 = new PictureBox();
             panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Menu).BeginInit();
             panel_TrangChu.SuspendLayout();
@@ -52,6 +55,8 @@
             panel_TaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_TaiKhoan).BeginInit();
             groupBox_NavBar.SuspendLayout();
+            panel_HDSDKhachHang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel_Top
@@ -126,7 +131,7 @@
             button_TrangChu.Location = new Point(68, 0);
             button_TrangChu.Name = "button_TrangChu";
             button_TrangChu.Size = new Size(138, 47);
-            button_TrangChu.TabIndex = 5;
+            button_TrangChu.TabIndex = 0;
             button_TrangChu.Text = "Trang Chủ";
             button_TrangChu.UseVisualStyleBackColor = false;
             button_TrangChu.Click += button_TrangChu_Click;
@@ -153,7 +158,7 @@
             button_DatSan.Location = new Point(68, 0);
             button_DatSan.Name = "button_DatSan";
             button_DatSan.Size = new Size(138, 47);
-            button_DatSan.TabIndex = 5;
+            button_DatSan.TabIndex = 1;
             button_DatSan.Text = "Đặt Sân";
             button_DatSan.UseVisualStyleBackColor = false;
             button_DatSan.Click += button_DatSan_Click;
@@ -191,7 +196,7 @@
             button_TaiKhoan.Location = new Point(68, 0);
             button_TaiKhoan.Name = "button_TaiKhoan";
             button_TaiKhoan.Size = new Size(138, 47);
-            button_TaiKhoan.TabIndex = 5;
+            button_TaiKhoan.TabIndex = 2;
             button_TaiKhoan.Text = "Tài Khoản";
             button_TaiKhoan.UseVisualStyleBackColor = false;
             button_TaiKhoan.Click += button_TaiKhoan_Click;
@@ -212,6 +217,7 @@
             // groupBox_NavBar
             // 
             groupBox_NavBar.BackColor = Color.FromArgb(232, 239, 207);
+            groupBox_NavBar.Controls.Add(panel_HDSDKhachHang);
             groupBox_NavBar.Controls.Add(panel_TrangChu);
             groupBox_NavBar.Controls.Add(panel_DatSan);
             groupBox_NavBar.Controls.Add(panel_TaiKhoan);
@@ -221,6 +227,42 @@
             groupBox_NavBar.Size = new Size(209, 624);
             groupBox_NavBar.TabIndex = 4;
             groupBox_NavBar.TabStop = false;
+            // 
+            // panel_HDSDKhachHang
+            // 
+            panel_HDSDKhachHang.BackColor = Color.FromArgb(79, 111, 82);
+            panel_HDSDKhachHang.Controls.Add(button_HDSDKhachhang);
+            panel_HDSDKhachHang.Controls.Add(pictureBox1);
+            panel_HDSDKhachHang.Location = new Point(6, 226);
+            panel_HDSDKhachHang.Name = "panel_HDSDKhachHang";
+            panel_HDSDKhachHang.Size = new Size(206, 47);
+            panel_HDSDKhachHang.TabIndex = 16;
+            // 
+            // button_HDSDKhachhang
+            // 
+            button_HDSDKhachhang.BackColor = Color.Transparent;
+            button_HDSDKhachhang.Dock = DockStyle.Right;
+            button_HDSDKhachhang.FlatStyle = FlatStyle.Flat;
+            button_HDSDKhachhang.Font = new Font("Calibri", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button_HDSDKhachhang.ForeColor = Color.White;
+            button_HDSDKhachhang.Location = new Point(68, 0);
+            button_HDSDKhachhang.Name = "button_HDSDKhachhang";
+            button_HDSDKhachhang.Size = new Size(138, 47);
+            button_HDSDKhachhang.TabIndex = 2;
+            button_HDSDKhachhang.Text = "Hướng dẫn sử dụng";
+            button_HDSDKhachhang.UseVisualStyleBackColor = false;
+            button_HDSDKhachhang.Click += button_HDSDKhachhang_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Left;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(68, 47);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
             // 
             // Software
             // 
@@ -244,6 +286,8 @@
             panel_TaiKhoan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox_TaiKhoan).EndInit();
             groupBox_NavBar.ResumeLayout(false);
+            panel_HDSDKhachHang.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -264,5 +308,8 @@
         private Button button_TaiKhoan;
         private PictureBox pictureBox_TaiKhoan;
         private GroupBox groupBox_NavBar;
+        private Panel panel_HDSDKhachHang;
+        private Button button_HDSDKhachhang;
+        private PictureBox pictureBox1;
     }
 }

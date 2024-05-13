@@ -97,6 +97,11 @@ namespace GUI
             khachHang = null;
             quanLy = null;
             changePanelShow(new DangNhap(this));
-        }   
+        }
+
+        private void button_HDSDKhachhang_Click(object sender, EventArgs e)
+        {
+            changePanelShow(new HuongDanSuDung());
+        }
     }
 }

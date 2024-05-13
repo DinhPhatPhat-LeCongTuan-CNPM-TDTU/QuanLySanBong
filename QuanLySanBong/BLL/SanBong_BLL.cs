@@ -24,5 +24,10 @@ namespace BLL
         {
            SanBongAccess.UpdateGiaSanTheoPhut(maSanBong, giaSanTheoPhut);
         }
+
+        public static DataTable XemGiaSan()
+        {
+            return SanBongAccess.XemGiaSan();
+        }
     }
 }
